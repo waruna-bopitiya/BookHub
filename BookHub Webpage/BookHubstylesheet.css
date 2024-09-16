@@ -185,7 +185,6 @@ body{
 }
 
 .banner {
-<<<<<<< Updated upstream
     background-color: #9bffeb;
     position: absolute;
     top: 180px;
@@ -194,18 +193,8 @@ body{
     margin: 0px ;
     display: flex;
     justify-content: center;
-=======
-    background-color: #0d7ca4;
-    height: auto;
-    display: flex;
-    margin: 190px 0px 0px 0px;
-    justify-content: space-between;
->>>>>>> Stashed changes
     align-items: center;
     position: relative;
-<<<<<<< Updated upstream
-    cursor: pointer;
-=======
     /* border: red 1px solid; */
 }
 
@@ -213,7 +202,6 @@ body{
     place-items: center;
     display: flex;
     margin: 0px;
->>>>>>> Stashed changes
 }
 
 #img1{
@@ -224,18 +212,6 @@ body{
 
 
 #nxtinbanner1{
-<<<<<<< Updated upstream
-    position: absolute;
-    color: white;
-    font-size: 30px;
-    top: 50%;
-    bottom: 50%;
-    left: 3%;
-    width: 40px;
-    height: 80px;
-    justify-content: center;
-    background-blend-mode:darken;
-=======
     position: absolute;   
     background: linear-gradient(to left, rgba(0, 128, 145, 0.8), rgba(255, 255, 255, 0.0));                               
     color: white;
@@ -243,7 +219,6 @@ body{
     width: 70px;
     height: 100%;
     right: 0%;
->>>>>>> Stashed changes
     border-style: none;
     transition: background-color 0.5s ease;
     place-items: center;
@@ -266,7 +241,6 @@ body{
     
 }
 
-<<<<<<< Updated upstream
 #nxtinbanner2:hover, #nxtinbanner1:hover{
     background-color: #2C3E50;
     cursor: pointer;
@@ -295,7 +269,8 @@ body{
 
 .trending_title h2 {
     color: rgb(255, 255, 255);
-=======
+}
+
 #prvsbanner1:hover, #nxtinbanner1:hover{
     background-color: #008091;
     color: #000;
@@ -307,7 +282,7 @@ body{
     background-color: black;
     color: white;
     margin: 0px;
->>>>>>> Stashed changes
+
     text-align: center;
 }
 
@@ -331,4 +306,4 @@ body{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
     transition: 0.5s; 
     display: inline-block;    
-}                      
+}               
