@@ -249,7 +249,7 @@ body{
     background-color: #7c7c7c;
     width: 100%;
     height: 60px;
-    top: 510px;
+    top: 10px;
     right: 0;
     left: 0;
     position: relative;
@@ -267,6 +267,7 @@ body{
 .trending_title h2 {
     color: rgb(255, 255, 255);
 }
+
 #prvsbanner1:hover, #nxtinbanner1:hover{
     background-color: #008091;
     color: #000;
@@ -278,6 +279,7 @@ body{
     background-color: black;
     color: white;
     margin: 0px;
+
     text-align: center;
 }
 
