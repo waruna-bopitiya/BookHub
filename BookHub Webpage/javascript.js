@@ -22,6 +22,7 @@ function next(){
         img1.src = imageArray[0];
     }
 }
+
     
    
  
@@ -46,6 +47,8 @@ function previous(){
         img1.src = imageArray[1]; 
     } 
     else {
-        img1.src = imageArray[2];
+
+        img1.src = imageArray[2 ];
     }
 }
+

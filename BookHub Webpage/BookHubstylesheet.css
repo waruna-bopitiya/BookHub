@@ -185,14 +185,11 @@ body{
 }
 
 .banner {
-    background-color: #9bffeb;
-    position: absolute;
-    top: 180px;
-    right: 0;
-    left: 0;
-    margin: 0px ;
+    background-color: #0d7ca4;
+    height: auto;
     display: flex;
-    justify-content: center;
+    margin: 190px 0px 0px 0px;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     /* border: red 1px solid; */
@@ -252,7 +249,7 @@ body{
     background-color: #7c7c7c;
     width: 100%;
     height: 60px;
-    top: 510px;
+    top: 10px;
     right: 0;
     left: 0;
     position: relative;
