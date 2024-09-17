@@ -405,12 +405,11 @@ h5{
     display: inline-block;
     padding: 20px;
     margin: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     background-color: lightblue;
     box-shadow: #000 0px 4px 6px;
     width: 100px;
     height: 150px;
-    margin: 10px;
     border: #000 1px solid;
     
 }
