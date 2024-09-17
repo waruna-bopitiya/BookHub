@@ -1,12 +1,18 @@
 body{
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
 }
+
 
 
 /* h1 { 
     color: rgb(255, 255, 255);
     margin-left: 20px;
 }*/
+
+h5{
+    padding-bottom: 20px;
+}
 
 .title_bar {
     background-color: #F39C12;
@@ -245,10 +251,10 @@ body{
 
 
 .trendingBooks{
-    background-color: #8a8a8a;
+
     color: white;
-    width: 100%;
-    height: 50px;
+    width: 100%;    
+    height: auto;
     top: 10px;
     right: 0;
     left: 0;
@@ -257,7 +263,7 @@ body{
 }
 
 .trendingBooks:hover{
-    background-color: #9c9c9c;
+    
     transition-duration: 0.5s;
 }
 
@@ -281,21 +287,28 @@ body{
 
 
 .trnd_bk_list{
+    background-color: #a8e5ff;
     display: inline-block;  
     width: 100%;
-    height: 400px;
+    height: 430px;
     white-space: nowrap;
     justify-content: center;
     align-items: center;
-    margin: 10px 0px;
-    padding: 0px;
+    margin: 0px;  
+    left: 0px;  
     overflow-x: scroll;
 }
 
+.trnd_bk_list:hover{
+    background-color: #00ffbf;
+    transition-duration: 0.5s;
+
+}
 .bkcontainer{
     width: 200px;
     height: 300px;
     margin: 10px;
+    margin-top: 30px;
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
     transition: 0.5s; 
@@ -303,7 +316,10 @@ body{
     text-align: center;
     display: inline-block;
 } 
+.bkcontainer:hover{
+    scale: 1.1;
 
+}
 .bkname{
     text-align: center; 
     margin-top: 5%;
@@ -329,6 +345,14 @@ body{
     
 }
 
+.discountads{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
 .discountads ul{
     display: flex;
     width: 100%;
@@ -338,13 +362,39 @@ body{
 }
 
 .discountads ul li {
-    border: #ff0000 1px solid;
     width: 100%;
     height: 100%;
-    padding: 0px;
     margin: 0px;
     list-style: none;
     text-align: center;
     display: inline-block;
-    padding: 0;
+}
+ 
+
+.discountads ul li h1 {
+    margin-bottom: 0px;
+}
+
+.discountads ul li h5 {
+    margin-top: 0%      ;
+}
+
+.salecontainer{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;    
+    height: 400px;
+    overflow-x: scroll;
+
+}
+
+.salecontainer .booksitem{
+    display: flex;
+    background-color: lightblue;
+    box-shadow: #000 0px 4px 6px;
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    border: #000 1px solid;
+    
 }
