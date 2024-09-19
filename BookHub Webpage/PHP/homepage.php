@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../BookHubstylesheet.css">
+    <link rel="stylesheet" href="../CSS/BookHubstylesheet.css">
     <title>Home page | BookHub</title>
-    <script src="javascript.js"></script>
+    <script src="../javaScript/javascript.js"></script>
     <script src="https://kit.fontawesome.com/2fd38a9fa7.js" crossorigin="anonymous"></script>
 </head>
 <body>
