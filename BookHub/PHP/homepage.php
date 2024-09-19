@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/BookHubstylesheet.css">
     <title>Home page | BookHub</title>
-    <script src="../javaScript/javascript.js"></script>
+    <script src="../jsfile/javascript.js"></script>
     <script src="https://kit.fontawesome.com/2fd38a9fa7.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -85,7 +85,7 @@
     <div class="banner">
         <div class="bannerimg">
             <button onclick="previous()" id="prvsbanner1"><</button>
-            <img src="..\images\banners\1.jpg" alt="Advertisment Banner" width="1920px" height="400px" id="img1"> 
+            <img src="../images/banners/1.jpg" alt="Advertisment Banner" width="1920px" height="400px" id="img1"> 
             <button onclick="next()" id="nxtinbanner1">></button>
 
         </div>
