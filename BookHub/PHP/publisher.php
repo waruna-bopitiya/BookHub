@@ -53,7 +53,7 @@
             <h2>Upload Book Details</h2>
         </div>
     
-    <form action="publisherinsert.php" method="POST">
+    <form action="publisherinsert.php" method="POST" enctype="multipart/form-data">
     <div class="form">
         
         <div class="form1">
