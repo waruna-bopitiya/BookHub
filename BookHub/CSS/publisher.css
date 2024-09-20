@@ -60,7 +60,7 @@ body{
     justify-content: space-between;
 }
 
-.form  {
+.form {
     background-color: rgb(219, 248, 255); 
     margin-top: 160px;
     width: 100%;
@@ -81,9 +81,9 @@ body{
 
 }
 
-.imageupload1{
+.imageupload1{  
 
-    background-color: #6acdff;
+    background-color: #266c8f;
     color: white;
     margin-top: 50px;
     width: 100px;

@@ -53,6 +53,7 @@
     </div>
 
     <div class="form">
+        
         <div class="form1">
             <form action="publisherinsert.php" method="POST">
             <p>Book Name</p>
