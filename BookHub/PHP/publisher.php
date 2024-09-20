@@ -8,9 +8,6 @@
     <title>Publisher | Boookhub</title>
 </head>
 <body>
-    <?php
-    require 'config.php';
-    ?>
 
     <div class="title_bar">
         <!-- This is the main division we allocated to show as the wire frame -->
@@ -76,7 +73,7 @@
 
         <div class="form2">
             <label for="imageupload1" class="imageupload1">Click here to upload image</label>
-            <input type="file" name="image" id="imageupload1" >
+            <input type="file" name="image" id="imageupload1" accept="image/*">
         </div>
         
        
