@@ -57,17 +57,39 @@
     <div class="form">
         
         <div class="form1">
-            
+            <p>ID</p>
+            <input type="number" name="bookid" placeholder="Book id" class="getinput">
             <p>Book Name</p>
             <input type="text" name="bookname" placeholder="Book Name" class="getinput">
             <p>Author Name</p>
-            <input type="text" name="authorkname" placeholder="Author Name" class="getinput">
-            <p>Price</p>
-            <label for="number">Rs.</label>
-            <input type="number" name="price" placeholder="Price" class="getinput" style="width: 100px;">
+            <input type="text" name="authorname" placeholder="Author Name" class="getinput">
+            
+            <div class="priceandcate">
+
+                <div>   
+                        <p>Price</p>
+                        <label for="number">Rs.</label>
+                        <input type="number" name="price" placeholder="Price" class="getinput" style="width: 100px;">
+                </div>
+                        
+                <div>
+                        <p style="margin-right: 30px;">Category</p>
+                            <label for="category"></label>
+                        <select name="category" id="category" class="getinput" style="width: 200px; height: 40px; margin-right: 30px;">
+                          <option value="Fiction">Fiction</option>
+                          <option value="NFiction">Non-Fiction</option>
+                          <option value="MChildren">MercedesChildren's Books</option>
+                          <option value="ae">Academic & Educational</option>
+                          <option value="lh">Lifestyle & Hobbies</option>
+                        </select>
+                </div>
+                        
+            </div>
+            
+
             <p>Published Date</p>
             <input type="date" name="publishdate" id="" class="getinput">
-            
+
             
         </div>
 
@@ -75,10 +97,6 @@
             <label for="imageupload1" class="imageupload1">Click here to upload image</label>
             <input type="file" name="image" id="imageupload1" accept="image/*">
         </div>
-        
-       
-
-        
     </div>
 
     <div class="submit">    
@@ -87,6 +105,7 @@
     </div>
     </form>
 
+    
     
 </body>
 </html>

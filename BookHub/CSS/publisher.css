@@ -108,6 +108,17 @@ label.imageupload1{
     padding: 10px;
 }
 
+.priceandcate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    border-radius: 15px;
+    padding: 20px;
+
+}
 
 .form2{
     margin-top: 50px;
