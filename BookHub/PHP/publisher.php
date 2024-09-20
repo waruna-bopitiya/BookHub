@@ -52,31 +52,43 @@
 
     </div>
 
+    <div class="uploadbooktitle">
+            <h2>Upload Book Details</h2>
+        </div>
+    
+    <form action="publisherinsert.php" method="POST">
     <div class="form">
         
         <div class="form1">
-            <form action="publisherinsert.php" method="POST">
+            
             <p>Book Name</p>
-            <input type="text" name="bookname" placeholder="Book Name">
+            <input type="text" name="bookname" placeholder="Book Name" class="getinput">
             <p>Author Name</p>
-            <input type="text" name="authorkname" placeholder="Author Name">
+            <input type="text" name="authorkname" placeholder="Author Name" class="getinput">
             <p>Price</p>
             <label for="number">Rs.</label>
-            <input type="number" name="price" placeholder="Price">
+            <input type="number" name="price" placeholder="Price" class="getinput" style="width: 100px;">
             <p>Published Date</p>
-            <input type="date" name="publishdate" id="">
-            </form>
+            <input type="date" name="publishdate" id="" class="getinput">
+            
+            
         </div>
 
         <div class="form2">
-            <label for="imageupload1" class="imageupload1">Upload image</label>
+            <label for="imageupload1" class="imageupload1">Click here to upload image</label>
             <input type="file" name="image" id="imageupload1" >
-            </form>
         </div>
-
+        
+       
 
         
     </div>
+
+    <div class="submit">    
+        <label for="submitbtn1" class="submitbtn1">Submit</label>
+          <input type="submit" name="submit" value="Submit" id="submitbtn1">
+    </div>
+    </form>
 
     
 </body>

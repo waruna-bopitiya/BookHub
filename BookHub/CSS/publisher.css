@@ -3,6 +3,7 @@ body{
     margin: 0px;
     box-sizing: border-box;
     padding: 0px;
+    background-color: rgb(213, 235, 255);
 }
 
 .title_bar {
@@ -60,19 +61,57 @@ body{
     justify-content: space-between;
 }
 
-.form {
-    background-color: rgb(219, 248, 255); 
-    margin-top: 160px;
+.uploadbooktitle{
     width: 100%;
-    height: 600px;
+    height: 50px;
     display: flex;
-    justify-content: space-around;
+    margin-top: 160px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.form {
+     width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px;
+
+}
+
+label.imageupload1{
+    cursor: pointer;
+    width: 200px;
+    height: 100px;
+    text-align: center;
 
 }
 
 .form1{
-    margin-left: 10%;
+    padding-right: 30px;
+    margin-top: 20px;
+}
+
+.form1 p{
+    margin-bottom: 0px;
+    font-size: 110%;
+}
+.getinput{
+    width: 400px;
+    height: 20px;
+    margin-top: 0px;
+    border-radius: 15px;
+    border: #007e8f 1px solid;
+    padding: 10px;
+}
+
+
+.form2{
     margin-top: 50px;
+    padding-left: 30px;
 }
 
 
@@ -83,17 +122,73 @@ body{
 
 .imageupload1{  
 
-    background-color: #266c8f;
-    color: white;
-    margin-top: 50px;
-    width: 100px;
+    background-color: #54b5e6;
+    color: rgb(0, 0, 0);
+    width: 100%;
     height: 100px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+    border-radius: 15px;    cursor: pointer;
     font-size: 16px;
     font-weight: bold;
+    transition-duration: 0.5s;
 }
+
+.imageupload1:hover{
+    background-color: #2fa27c;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+#submitbtn1{
+    display: none;
+}
+
+
+.submitbtn1{
+    width: 200px;
+    height: 50px;
+    background-color: #007e8f;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 15px;    cursor: pointer;
+    margin-top: 0px;
+    padding-top: 0px;
+    transition-duration: 0.5s;
+}
+
+
+.submitbtn1:hover{
+    width: 200px;
+    height: 50px;
+    background-color: #003b42;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 15px;    cursor: pointer;
+    margin-top: 0px;
+    padding-top: 0px;
+    transition-duration: 0.5s;
+}
+
+.submit{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0px;
+    padding-top: 0px;
+
+}
+
+
 
   
 
