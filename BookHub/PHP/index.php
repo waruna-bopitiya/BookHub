@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +10,7 @@
     <script src="https://kit.fontawesome.com/2fd38a9fa7.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    
 <div>
 
 
@@ -117,7 +119,7 @@
             <ul>
                 <li><h1>20% <br> Discount <br> <h5>For seleceted books</h5></h1></li>
                 <li style="border-left: #ffffff 5px solid; border-right: #ffffff 5px solid;"><h1>3 in 1 <br> Discount <br> <h5>*Conditions apply</h5></h1></li>
-                <li><h1 style="font-size: 60px;">DON'T MISS<br> <h5>such a deal</h5></h1></li>
+                <li><h1 style="font-size: 60px;">DON'T MISS <br> <h5> such a deal</h5> </h1> </li>
             </ul>
             
         </div>
