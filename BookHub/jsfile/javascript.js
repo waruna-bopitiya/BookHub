@@ -55,5 +55,18 @@ function previous(){
     }
 }
 
+function preview_image(event){
+    var reader = new FileReader();
+    var imageField = document.getElementById("updateimg");
+    var a = document.getElementById("hide");
 
-// sldmlvsndfjvsdkjfvdjfkvjdf
+            reader.onload = function(){
+                
+                imageField.src = reader.result;
+                imageField.style.display = "block";
+            }
+
+            reader.readAsDataURL(event.target.files[0]);
+            a.p.style.display = "none";
+           
+        }

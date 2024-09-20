@@ -7,7 +7,6 @@
 
     require 'config.php';
     
-    $bookid = $_POST["bookid"];
     $bookname = $_POST["bookname"];
     $authorname = $_POST["authorname"];
     $price = $_POST["price"];
@@ -24,6 +23,19 @@
         echo "Failed to upload image";
     }
 
-    $sql = "INSERT INTO books (bookID , bookName , authorName , price	category , publishdate , image) VALUES ('$bookid', '$bookname', '$authorname','$price','$category','$publishdate', '$image')";
+    $sql = "INSERT INTO books (bookName , authorName , price ,	category , publishdate , image) VALUES ('$bookname', '$authorname','$price','$category','$publishdate', '$image')";
+
+    if(mysqli_query($con, $sql)){
+        
+        echo "record added succesfully to database";
+    }
+    else{
+        echo "failed to add record to database" .mysqli_error($con);
+
+    }
+
+    mysqli_close($con);
+
 }
+
 ?>

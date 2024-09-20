@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/publisher.css">
     <title>Publisher | Boookhub</title>
+    <script src="../jsfile/javascript.js"></script>
 </head>
 <body>
 
@@ -57,8 +58,6 @@
     <div class="form">
         
         <div class="form1">
-            <p>ID</p>
-            <input type="number" name="bookid" placeholder="Book id" class="getinput">
             <p>Book Name</p>
             <input type="text" name="bookname" placeholder="Book Name" class="getinput">
             <p>Author Name</p>
@@ -94,8 +93,10 @@
         </div>
 
         <div class="form2">
-            <label for="imageupload1" class="imageupload1">Click here to upload image</label>
-            <input type="file" name="image" id="imageupload1" accept="image/*">
+            <label for="imageupload1" class="imageupload1" id="hide"><p>Click here to upload image</p>
+            <img id="updateimg" src=""></label>
+            <input type="file" name="image" id="imageupload1" accept="image/*" onchange="preview_image(event)">
+            
         </div>
     </div>
 
