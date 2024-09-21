@@ -34,6 +34,7 @@ function previous(){
         "src/asserts/images/banners/b3.jpg",
         "src/asserts/images/banners/b4.jpg"
     ];
+    //fvdfvdfvsfvsfv
 
     const img1 = document.getElementById("img1");
     const currentImage = img1.src;
