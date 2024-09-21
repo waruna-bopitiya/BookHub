@@ -67,6 +67,6 @@ function preview_image(event){
             }
 
             reader.readAsDataURL(event.target.files[0]);
-            a.p.style.display = "none";
+            document.write("style")
            
         }
