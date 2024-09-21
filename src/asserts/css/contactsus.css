@@ -202,3 +202,9 @@ h5{
     color: #fff; /* Change font color when li is hovered */
 }
 
+.map
+{
+    border: 5px;
+    width: 250px;
+    height: 250px;
+}
