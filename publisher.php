@@ -1,6 +1,7 @@
 <?php
 require_once('header.php')
 ?>
+
     <div class="uploadbooktitle">
         <h2>Upload Book details</h2>
     </div>
@@ -57,10 +58,3 @@ require_once('header.php')
     </div>
     </form>
 
-
-    
-
-    
-    
-</body>
-</html>
