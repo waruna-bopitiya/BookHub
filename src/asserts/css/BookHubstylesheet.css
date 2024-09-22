@@ -401,17 +401,31 @@ h5{
 
 }
 
+.bksalename{
+    display: absolute;
+    text-align: center;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 10%;
+    
+}
+
 .booksitem{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
     padding: 20px;
-    margin: 20px;
-    margin-bottom: 50px;
+    margin: 10px 20px;
     background-color: lightblue;
     box-shadow: #000 0px 4px 6px;
     width: 100px;
     height: 150px;
     border: #000 1px solid;
     
+}
+
+.bkcntain{
+    padding-bottom: 40px;
+    margin: 20px;
 }
 
 .banner2{
@@ -452,4 +466,8 @@ h5{
     padding-bottom: 30px;
 }
 
+.bktd{
+    text-align: center;
+
+}
 /* lskdos tesssdkmslkndf lksrkls dlkldsv */

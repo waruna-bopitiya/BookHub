@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src\asserts\css\BookHubstylesheet.css">
+    <link rel="stylesheet" href="src/asserts/css/BookHubstylesheet.css">
     <title>Home page | BookHub</title>
-    <script src="src\asserts\js\javascript.js"></script>
+    <script src="src/asserts/js/javascript.js"></script>
     <script src="https://kit.fontawesome.com/2fd38a9fa7.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -87,7 +87,7 @@
     <div class="banner">
         <div class="bannerimg">
             <button onclick="previous()" id="prvsbanner1"><</button>
-            <img src="src\asserts\images\banners\1.jpg" alt="Advertisment Banner" width="1920px" height="400px" id="img1"> 
+            <img src="src/asserts/images/banners/b1.jpg" alt="Advertisment Banner" width="1920px" height="400px" id="img1"> 
             <button onclick="next()" id="nxtinbanner1">></button>
 
         </div>
@@ -127,22 +127,22 @@
     </div>
 
     <div class="salecontainer">
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
-        <div class="booksitem">Sample book</div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
+        <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
     
 
 
