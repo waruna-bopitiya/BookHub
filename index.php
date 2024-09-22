@@ -126,7 +126,7 @@
 
     </div>
 
-    <div class="salecontainer">
+    <!-- <div class="salecontainer">
         <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
         <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
         <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
@@ -144,11 +144,34 @@
         <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
         <div class="bkcntain"><div class="bksalename">Sample book</div><div class="booksitem"></div><div class="bktd">Rs300</div></div>
     
+    </div> -->
+
+    <div class="salecontainer">
+<!-- ______________________________________________________________________ -->
+            <?php
+                     require_once('config.php');
+
+                     $sql = "SELECT bookName , image, price FROM books";
+
+                        $result = $con->query($sql);
+
+                       
+
+                       while ($row =$result->fetch_assoc()) {
+                        echo "<div class='bkcntain'><div class='bksalename'>";
+                           echo "<h3>".$row['bookName']."</h3>";
+                           echo "</div><div class='booksitem'><cenetr><img src='src/asserts/images/upimages/".$row['image']."' width='100%' height='100%'></center></td></div><div class='bktd'>";
+                           echo "Rs. ".$row['price'];
+                       
+                       
+                       
+                       echo "</div></div>";
+                    }
 
 
-
-
-    </div>
+            ?>
+            </div>
+    <!-- _____________________________________________________________________ -->
 
     <div class="banner2">
         <div class="banner2Content">

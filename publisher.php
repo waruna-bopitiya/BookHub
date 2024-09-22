@@ -3,7 +3,7 @@ require_once('header.php')
 ?>
 
     <div class="uploadbooktitle">
-        <h2>Upload Book details</h2>
+        <h2>Upload a Book</h2>
     </div>
     
     <form action="publisherinsert.php" method="POST" enctype="multipart/form-data">
