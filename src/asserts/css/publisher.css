@@ -165,7 +165,7 @@ label.imageupload1{
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: rgb(0, 0, 0);
     border-radius: 15px;    cursor: pointer;
     margin-top: 0px;
     padding-top: 0px;
