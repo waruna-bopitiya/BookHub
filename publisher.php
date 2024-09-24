@@ -3,7 +3,7 @@ require_once('header.php')
 ?>
 
     <div class="uploadbooktitle">
-        <h2>Upload Book details</h2>
+        <h2>Upload a Book</h2>
     </div>
     
     <form action="publisherinsert.php" method="POST" enctype="multipart/form-data">
@@ -28,10 +28,10 @@ require_once('header.php')
                             <label for="category"></label>
                         <select name="category" id="category" class="getinput" style="width: 200px; height: 40px; margin-right: 30px;">
                           <option value="Fiction">Fiction</option>
-                          <option value="NFiction">Non-Fiction</option>
-                          <option value="MChildren">MercedesChildren's Books</option>
-                          <option value="Academic&Educational">Academic & Educational</option>
-                          <option value="Lifestyle&Hobbies">Lifestyle & Hobbies</option>
+                          <option value="Non-Fiction">Non-Fiction</option>
+                          <option value="MercedesChildren's Books">MercedesChildren's Books</option>
+                          <option value="Academic & Educational">Academic & Educational</option>
+                          <option value="Lifestyle & Hobbies">Lifestyle & Hobbies</option>
                         </select>
                 </div>
                         

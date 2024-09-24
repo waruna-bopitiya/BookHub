@@ -209,8 +209,33 @@ label.imageupload1{
 
 .table1{
     margin-top:180px;
-    /* colspan: 2; */
+    
 }
+
+table{
+    border-collapse: collapse;
+    width: 60%;
+    margin: 250px auto;
+}
+
+table td, th{
+    border: 1px solid #000000;
+    z-index: 50;
+    text-align: center;
+    padding: 20px;
+}
+
+tbody tr:nth-child(odd)     {
+    background-color : #f9f9f9;
+}
+
+tbody tr:nth-child(even)     {
+    background-color : #e6f7ff;
+}
+
+tbody tr:hover {
+    background-color: #d1ecf1;
+
 
 
 

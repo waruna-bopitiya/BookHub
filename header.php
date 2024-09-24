@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/asserts/css/publisher.css">
     <title>Publisher | Boookhub</title>
-    <script src="../jsfile/javascript.js"></script>
+    <script src="src/asserts/js/javascript.js"></script>
 </head>
 <body>
 
