@@ -1,11 +1,13 @@
-
+<?php $title="Home Page"; ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/asserts/css/BookHubstylesheet.css">
-    <title>Home page | BookHub</title>
+    <title>
+            <?php echo $title; 
+            ?> | BookHub</title>
     <script src="src/asserts/js/javascript.js"></script>
     <script src="https://kit.fontawesome.com/2fd38a9fa7.js" crossorigin="anonymous"></script>
 </head>
@@ -65,8 +67,8 @@
 
                  <div class="menu">
                     <ul>
-                        <li class="menu-item"><a href="#">Home</a></li>
-                        <li class="menu-item"><a href="#">Categories</a></li>
+                        <li class="menu-item"><a href="index.php">Home</a></li>
+                        <li class="menu-item"><a href="category.php">Categories</a></li>
                         <li class="menu-item"> <a href="#">About Us</a></li>
                         <li class="menu-item"><a href="#">Contact Us</a></li>
                         <li class="menu-item"><a href="#">Return Policy</a></li>
