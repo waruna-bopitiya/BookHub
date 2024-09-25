@@ -3,7 +3,7 @@
     
 
     if(isset($_POST['submit'])) {
-    $target = "images/".basename($_FILES['image']['name']);
+    $target = "src/asserts/images/upimages/".basename($_FILES['image']['name']);
 
 
     require 'config.php';
@@ -11,7 +11,7 @@
     $bookname = $_POST["bookname"];
     $authorname = $_POST["authorname"];
     $price = $_POST["price"];
-    $category = $_POST["category"];
+    $category = $_POST['category'];
     $publishdate = $_POST["publishdate"];
     $image = $_FILES["image"]["name"];
 
