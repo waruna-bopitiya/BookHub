@@ -1,4 +1,4 @@
-<?php $title="About US "; ?>
+<?php $title="Contact US "; ?>
 <?php
     require_once('bookhubheader.php');
 ?>
