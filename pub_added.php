@@ -20,7 +20,7 @@
             
             echo "<tr><td>" .$row['bookID']."</td>";
             echo "<td>" .$row['bookName']."</td>";
-            echo "<td>" ."<img src='src/asserts/images/upimages/".$row['image']."' width='100px' height='150px'></td>";
+            echo "<td>" ."<img src='src/asserts/images/upimages/".$row['image']."' width='50px' height='75px'></td>";
             echo "<td>" .$row['authorName']."</td>";
             echo "<td>" .$row['price']."</td>";
             echo "<td>" .$row['category']."</td></tr>";
