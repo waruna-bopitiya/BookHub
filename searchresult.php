@@ -1,4 +1,3 @@
-
 <?php $title="Search result :"; 
     require_once('bookhubheader.php');
 ?>
@@ -19,14 +18,22 @@
                 {
                     foreach($query_run as $items)
                     {
-                        ?>
-                                    <tr>    
+                        ?>          
+                                    <div class="sitem">
+                                    <tr>  
+                                        
+                                        <div class="s_item_image">
                                         <td class="image"><img src="src/asserts/images/upimages/<?= $items['image']; ?>" </td> <br>
+                                        </div>
+                                        
+                                        <div class="s_item_text">
                                         <td class="bookname"><?= $items['bookName']; ?></td><br>
                                         <td class="author"><?= $items['authorName']; ?></td><br>
                                         <td class="category"><?= $items['category']; ?></td>
+                                        </div>
 
                                     </tr>
+                                    </div>
                                     <?php
                                 }
                  }

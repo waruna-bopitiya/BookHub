@@ -62,7 +62,7 @@
 
                  <div class="menu">
                     <ul>
-                        <li class="menu-item"><a href="#">Home</a></li>
+                        <li class="menu-item"><a href="index.php">Home</a></li>
                         <li class="menu-item"><a href="#">Categories</a></li>
                         <li class="menu-item"> <a href="#">About Us</a></li>
                         <li class="menu-item"><a href="#">Contact Us</a></li>

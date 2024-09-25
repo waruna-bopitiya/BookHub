@@ -1,10 +1,15 @@
 .searchresult{
-    justify-content: space-around;
     margin-left: 40%;
     margin-top: 250px;
 }
 
 .footer {
-    background-color: #333;
 
+
+}
+
+
+.sitem{
+    display: inline;
+    border: #333 2px solid;
 }
