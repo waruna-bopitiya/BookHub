@@ -23,12 +23,12 @@
                                     <tr>  
                                         
                                         <div class="s_item_image">
-                                        <td class="image"><img src="src/asserts/images/upimages/<?= $items['image']; ?>" </td> <br>
+                                        <td class="image"><img src="src/asserts/images/upimages/<?= $items['image']; ?> " width="100px" height="150px" border-radius="20px";> </td> <br>
                                         </div>
                                         
                                         <div class="s_item_text">
-                                        <td class="bookname"><?= $items['bookName']; ?></td><br>
-                                        <td class="author"><?= $items['authorName']; ?></td><br>
+                                        <td class="bookname"><h2><?= $items['bookName']; ?></h2></td><br>
+                                        <td class="author"><h4><?= $items['authorName']; ?></h4></td><br>
                                         <td class="category"><?= $items['category']; ?></td>
                                         </div>
 

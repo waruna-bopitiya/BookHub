@@ -49,7 +49,7 @@ require_once('header.php')
             echo "<td>
                     <form method='POST' action=''>
                         <input type='hidden' name='bookID' value='" . $row['bookID'] . "'>
-                        <input type='submit' name='delete' value='Delete'>
+                        <input type='submit' name='delete' value='Delete' id='dltbtn'>
                     </form>
                   </td>";
         
@@ -57,7 +57,7 @@ require_once('header.php')
             echo "<td>
                     <form method='GET' action='editdata.php'>
                         <input type='hidden' name='bookID' value='" . $row['bookID'] . "'>
-                        <input type='submit' name='edit' value='Edit'>
+                        <input type='submit' name='edit' value='Edit' id='Edit'>
                     </form>
                   </td>";
         

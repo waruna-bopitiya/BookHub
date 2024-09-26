@@ -55,7 +55,7 @@
                     <form action="searchresult.php" method="GET">
                      <div class="search-container">
                         <input type="text" class="search-box" placeholder="Search in BookHub" name="searchname" value="<?php if (isset($_GET['searchname'])){echo $_GET['searchname'];}   ?>">
-                        <input type="submit" class="search-button"> <a href="searchresult.php"><img src="src\asserts\images\menu bar\icons8-search-50.png" width="25px" height="25px">
+                        <input type="submit" class="search-button" name="submit">  
                      </div></form>
 
 
