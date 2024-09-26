@@ -5,7 +5,10 @@ require('config.php');
 <link rel="stylesheet" href="src/asserts/css/publisher.css">
 
 <div class="uploadbooktitle">
-    <h2>Upload a Book</h2>
+
+<a href="#" class="button1">Edit Book Details</a>
+<a href="pub_added.php" class="button2">Discard Editing</a>
+
 </div>
 
 <form action="editinsert.php" method="POST" enctype="multipart/form-data">

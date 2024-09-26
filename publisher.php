@@ -3,11 +3,13 @@ require_once('header.php')
 ?>
 
 <link rel="stylesheet" href="src/asserts/css/publisher.css">
-
     <div class="uploadbooktitle">
-        <h2>Upload a Book</h2>
+
+            <a href="publisher.php" class="button1">Add a Book</a>
+            <a href="pub_added.php" class="button2">Added Book List</a>
+
     </div>
-    
+        
     <form action="publisherinsert.php" method="POST" enctype="multipart/form-data">
     <div class="form">
          
@@ -55,8 +57,8 @@ require_once('header.php')
     </div>
 
     <div class="submit">    
-        <label for="submitbtn1" class="submitbtn1">Submit</label>
-          <input type="submit" name="submit" value="Submit" id="submitbtn1">
+            <label for="submitbtn1" class="submitbtn1">Submit</label>
+            <input type="submit" name="submit" value="Submit" id="submitbtn1">
     </div>
     </form>
 

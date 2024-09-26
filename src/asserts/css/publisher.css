@@ -1,3 +1,31 @@
+body {
+   margin-left: 0px;
+   margin-right: 0px;
+}
+
+
+
+.addbk {
+   width: 100%;
+   justify-content: space-around;
+   background-color: #6e6e6e;
+   color: white;
+   height: 100%;
+   text-align: center;
+   display: flex;
+   align-items: center;
+   border: none;
+   border-collapse: collapse;
+   transition-duration: 0.05s;
+   
+}
+
+.addbk:hover {
+   background-color: #3c3c3c;
+   color: #ffffff;
+   cursor: pointer;
+}  
+
 
 .form {
     width: 100%;
@@ -65,7 +93,9 @@ label.imageupload1{
    width: 100%;
    height: 100px;
    display: flex;
+   flex-direction: column;
    justify-content: center;
+   align-items: center;
    padding: 100px;
    border-radius: 15px;    cursor: pointer;
    font-size: 16px;
@@ -132,5 +162,39 @@ label.imageupload1{
    max-width: 100%;
    max-height: 100%;
    display: flex;
+}
+
+
+
+.button1 {
+   flex: 1; 
+   text-align: center;
+   background-color: #323232;
+   color: white;
+   width: 100%;
+   text-decoration: none; 
+   padding: 20px; 
+   border: 1px solid black; 
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+
+.button2 {
+   flex: 1; 
+   text-align: center;
+   background-color: #a2a2a2;
+   color: white;
+   width: 100%;
+   text-decoration: none; 
+   padding: 20px; 
+   border: 1px solid black; 
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+}
+
+.button2:hover {
+   background-color: #a2a2a2; 
 }
 

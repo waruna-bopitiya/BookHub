@@ -1,8 +1,14 @@
+<?php
+require_once('header.php')
+?>
 
 <link rel="stylesheet" href="src/asserts/css/pub_added.css">
 <div class="uploadbooktitle">
-        <h2>Uploaded Books details</h2>
-    </div>
+
+<a href="publisher.php" class="button1">Add a Book</a>
+<a href="pub_added.php" class="button2">Added Book List</a>
+
+</div>
 <?php
 
 
@@ -18,7 +24,7 @@
 
             
         require 'config.php';
-        require 'header.php';
+
         echo "<div class='table1'>";
         $sql = "SELECT bookID , bookName , image , authorName , price , category FROM books";
 
