@@ -1,0 +1,127 @@
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0px;
+    box-sizing: border-box;
+    padding: 0px;
+    background-color: rgb(213, 235, 255);
+}
+
+.title_bar {
+    background-color: #F39C12;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    
+
+}
+
+.title_grp {
+
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 5px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+
+}
+
+.menubar {
+    background-color: #007e8f;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    top: 30px;
+    right: 0;
+    left: 0;
+    justify-content: space-around;
+    align-items: center;
+    display: flex;
+  
+}
+
+.menu{
+    display: inline-block;
+}
+
+.menu ul {
+    /* border: 4px solid blue; */
+    width: 100%;
+    padding-inline-start: 0px; 
+   
+
+}
+
+.menu ul li{
+    /* border: 4px solid red; */
+    background-color: #1ABC9C;
+    color: #333333;
+    display: inline-block;
+    margin: 0px;
+    list-style: none;
+    padding: 10px;
+    width: 110px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+    transition: 0.5s;
+
+}
+
+.menu ul li:hover{
+    background-color: #2C3E50;
+    color: #fff;
+    transition-duration: 0.5s;
+    cursor: pointer;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.5);
+    font-weight: 1000;
+    scale: 1.1;
+    transition: 0.5s;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #000;
+
+}
+.menu ul li:hover a {
+    color: #fff; /* Change font color when li is hovered */
+}
+
+.menu-item{
+    text-align: center;
+}
+
+
+
+.menubar h1,img{
+    text-align: center;
+}
+
+.menuimage img{
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.uploadbooktitle{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    margin-top: 180px;
+    background-color: black;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}

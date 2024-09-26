@@ -2,13 +2,15 @@
 require_once('header.php')
 ?>
 
+<link rel="stylesheet" href="src/asserts/css/publisher.css">
+
     <div class="uploadbooktitle">
         <h2>Upload a Book</h2>
     </div>
     
     <form action="publisherinsert.php" method="POST" enctype="multipart/form-data">
     <div class="form">
-        
+         
         <div class="form1">
             <p>Book Name</p>
             <input type="text" name="bookname" placeholder="Book Name" class="getinput">

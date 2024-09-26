@@ -197,14 +197,15 @@ h5{
     color: #000;
 
 }
+.menu ul li:hover a {
+    color: #fff; /* Change font color when li is hovered */
+}
 
 .menu-item:hover{
     color: #fff;
 }
 
-.menu ul li:hover a {
-    color: #fff; /* Change font color when li is hovered */
-}
+
 
 .banner {
     background-color: #0d7ca4;

@@ -3,6 +3,9 @@
     
 
     if(isset($_POST['submit'])) {
+
+
+        
     $target = "src/asserts/images/upimages/".basename($_FILES['image']['name']);
 
 
@@ -42,3 +45,13 @@
 }
 
 ?>
+
+
+
+
+
+
+
+
+
+
