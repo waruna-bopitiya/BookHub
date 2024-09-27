@@ -54,6 +54,10 @@ body {
    background-color: #a2a2a2; 
 }
 
+thead{
+   background-color: #0d7ca4;
+   color: white;
+}
 
 
 .table1{
@@ -65,10 +69,11 @@ body {
     border-collapse: collapse;
     width: 60%;
     margin: 100px auto;
+    border: #000000 2px solid;
  }
  
  table td, th{
-    border: 1px solid #000000;
+    border: 2px solid #000000;
     z-index: 50;
     text-align: center;
     padding: 20px;
