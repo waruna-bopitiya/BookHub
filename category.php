@@ -9,19 +9,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/asserts/css/category.css">
+    <script src="src\asserts\js\category.js">
     <title>Document</title>
 </head>
 <body>
 <div class="category_bar">
     <div class="category-item-box">
         <ul>
-            <li><a href="#">Fiction</a></li>
-            <li><a href="#">Children's Books</a></li>
-            <li><a href="#">Science</a></li>
-            <li><a href="#">Education</a></li>
-            <li><a href="#">Novels</a></li>
-            <li><a href="#">Short Stories</a></li>
-            <li><a href="#">Magazines</a></li>
+            <li><a href="#" id="fiction" class="category_link">Fiction</a></li>
+            <li><a href="#" id="children" class="category_link">Children's Books</a></li>
+            <li><a href="#" id="science" class="category_link">Science</a></li>
+            <li><a href="#" id="education" class="category_link">Education</a></li>
+            <li><a href="#" id="novels" class="category_link">Novels</a></li>
+            <li><a href="#" id="short_stories" class="category_link">Short Stories</a></li>
+            <li><a href="#" id="magazines" class="category_link">Magazines</a></li>
         </ul>
     </div>
 </div>
