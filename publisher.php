@@ -3,6 +3,7 @@ require_once('header.php')
 ?>
 
 <link rel="stylesheet" href="src/asserts/css/publisher.css">
+<script src="src/asserts/js/publisher.js"></script>
     <div class="uploadbooktitle">
 
             <a href="publisher.php" class="button1">Add a Book</a>
@@ -15,16 +16,16 @@ require_once('header.php')
          
         <div class="form1">
             <p>Book Name</p>
-            <input type="text" name="bookname" placeholder="Book Name" class="getinput">
+            <input type="text" name="bookname" placeholder="Book Name" class="getinput" id="bookname" required>
             <p>Author Name</p>
-            <input type="text" name="authorname" placeholder="Author Name" class="getinput">
+            <input type="text" name="authorname" placeholder="Author Name" class="getinput" id="authorname">
             
             <div class="priceandcate">
 
                 <div>   
                         <p>Price</p>
                         <label for="number">Rs.</label>
-                        <input type="number" name="price" placeholder="Price" class="getinput" style="width: 100px;">
+                        <input type="number" name="price" id="price" placeholder="Price" class="getinput" style="width: 100px;">
                 </div>
                         
                 <div>
