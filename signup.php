@@ -9,31 +9,43 @@
 <body>
     <div class="content">
         <div class="form">
-            <header><h2>Sign Up</header></h2></header><br>
+            <header>
+                <h2>Sign Up</header></h2>
+            </header>
+            
+            <br>
+            
             <form id="signupForm" action="signupinsert.php" method="post">
-            <div class="field input">
-            <input type="text" id="fname" name="fname" placeholder="First Name" required/>
-            <br><br>
-            <div class="field input">
-            <input type="text" id="lname" name="lname" placeholder="Last Name" required/>
-            <br><br>
-            </div>
-            <div class="field input">
-            <input type="text" id="email" name="email" placeholder="E-mail" required/>
-            <br><br>
-            </div>
-            <div class="field input">
-            <input type="password" id="pwd" name="pwd" placeholder="Password">
-            <br><br>
-            </div>
-            <div class="field input">
-            <input type="password" id="rpwd" name="rpwd" placeholder="Re-Enter Password">
-            <br><br>
-            </div>
-            <div class="field">
-            <button name="submit" class="btn" type="submit">Register</button>
-            </div>
-       <p> Already a member?<a href="login.php">SIGN IN</a></p>
+                
+                <div class="field input">
+                    <input type="text" id="fname" name="fname" placeholder="First Name" required/>
+                </div>
+                
+                <div class="field input">
+                    <input type="text" id="lname" name="lname" placeholder="Last Name" required/>
+                   
+                </div>
+            
+                <div class="field input">
+                    <input type="text" id="email" name="email" placeholder="E-mail" required/>
+                
+                </div>
+            
+                <div class="field input">
+                    <input type="password" id="pwd" name="pwd" placeholder="Password">
+                   
+                </div>
+            
+                <div class="field input">
+                    <input type="password" id="rpwd" name="rpwd" placeholder="Re-Enter Password">
+                 
+                </div>
+            
+                <div class="field">
+                    <button name="submit" class="btn" type="submit">Register</button>
+                </div>
+       
+                <p> Already a member?<a href="login.php">SIGN IN</a></p>
     
     </form>
     </div>
