@@ -5,25 +5,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="src/asserts/css/login.css">
+    <script>
+        function validateForm(event) {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('pwd').value;
+
+            if (!email || !password) {
+                alert('Please fill out all fields.');
+                event.preventDefault(); 
+            }
+        }
+    </script>
 </head>
-<body style="background-image: url('src/asserts/images/loginbg.jpg');">
-    <div class="image">
-        <img src="src/asserts/images/loginbg.jpg" alt="Background Image">
-    </div>
+<body style="background-image: url('./src/assets/images/loginbg.png');">
+<div class="all">
     <div class="content">
-        <h3 class="title">Sign in</h3>
-        <form action="logininsert.php" method="post">
+        <div class="form-box">
+        <h3 class="title">Sign in</h3><br><br><br>
+        <form action="logininread.php" method="post" onsubmit="validateForm(event)">
             <label for="email">Username</label>
-            <br>
             <input type="text" id="email" name="email" placeholder="E-mail" required/>
             <br><br>
             <label for="pwd">Password</label>
-            <br>
             <input type="password" id="pwd" name="pwd" placeholder="Password">
             <br><br>
-            <button name="submit" type="submit">Login</button>
+            <button name="submit" id="signinBtn" type="submit" >Login</button>
         </form>
         <p>Not a member yet? <a href="signup.php">SIGNUP</a></p>
+     </div>
     </div>
+   </div>
+   </div>
 </body>
 </html>
