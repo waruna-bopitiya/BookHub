@@ -27,10 +27,6 @@ function validate() {
         return false;   
     }
     
-    if (!image) {
-        alert("Image cannot be empty");
-        return false;
-    }
     
     return true;
 }

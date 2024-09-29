@@ -11,12 +11,12 @@ require_once('header.php')
 
     </div>
         
-    <form action="publisherinsert.php" method="POST" enctype="multipart/form-data">
+    <form action="publisherinsert.php" method="POST" enctype="multipart/form-data" onsubmit="return validate()">
     <div class="form">
          
         <div class="form1">
             <p>Book Name</p>
-            <input type="text" name="bookname" placeholder="Book Name" class="getinput" id="bookname" required>
+            <input type="text" name="bookname" placeholder="Book Name" class="getinput" id="bookname">
             <p>Author Name</p>
             <input type="text" name="authorname" placeholder="Author Name" class="getinput" id="authorname">
             
@@ -43,23 +43,33 @@ require_once('header.php')
             </div>
             
 
-            <p>Published Date</p>
-            <input type="date" name="publishdate" id="" class="getinput">
+            <p>Add a description</p>
+            <textarea type="text" name="description" id="description" class="getinput" style="width: 400px; height: 80px; padding: 10px;"></textarea>
 
             
         </div>
 
+    
         <div class="form2">
             <label for="imageupload1" class="imageupload1" id="hide"><p>Click here to upload image</p>
             <img id="updateimg" src=""></label>
             <input type="file" name="image" id="imageupload1" accept="image/*" onchange="preview_image(event)">
-            
+            <input type="hidden" name="publishdate" id="publishdate" > 
         </div>
     </div>
+
+    <script>
+        publishdate = new Date(); 
+        document.getElementById("publishdate").value = publishdate;
+    
+    </script>
 
     <div class="submit">    
             <label for="submitbtn1" class="submitbtn1">Submit</label>
             <input type="submit" name="submit" value="Submit" id="submitbtn1">
     </div>
+
+    
     </form>
+
 

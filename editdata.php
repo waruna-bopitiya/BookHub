@@ -3,6 +3,7 @@ require_once('header.php');
 require('config.php');
 ?>
 <link rel="stylesheet" href="src/asserts/css/publisher.css">
+<script src="src/asserts/js/edit_data.js"></script>
 
 <div class="uploadbooktitle">
 
@@ -11,22 +12,25 @@ require('config.php');
 
 </div>
 
-<form action="editinsert.php" method="POST" enctype="multipart/form-data">
+<form action="editinsert.php" method="POST" enctype="multipart/form-data" onsubmit="return validate()">
     <div class="form">
         <?php
         $bookID = $_GET["bookID"];
-        $sql = "SELECT bookID, bookName, authorName, price, category, publishdate, image FROM books WHERE bookID = '$bookID'";
+        $sql = "SELECT bookID, bookName, authorName, price, category, description, image FROM books WHERE bookID = '$bookID'";
         $result = $con->query($sql);
 
         if ($result->num_rows > 0) {
+
             $row = $result->fetch_assoc();
             $name = $row['bookName'];
             $authorname = $row['authorName'];
             $price = $row['price'];
             $category = $row['category'];
-            $publishdate = $row['publishdate'];
+            $description = $row['description'];
             $image = $row['image'];
-        } else {
+
+        } 
+            else {
             echo "No book found with this ID";
             exit();
         }
@@ -35,15 +39,15 @@ require('config.php');
         <div class="form1">
             <input type="hidden" name="bookID" value="<?= $bookID ?>">
             <p>Book Name</p>
-            <input type="text" name="bookname" placeholder="Book Name" class="getinput" value="<?= $name ?>">
+            <input type="text" name="bookname" id="bookname" placeholder="Book Name" class="getinput" value="<?= $name ?>">
             <p>Author Name</p>
-            <input type="text" name="authorname" placeholder="Author Name" class="getinput" value="<?= $authorname ?>">
+            <input type="text" name="authorname" id="authorname" placeholder="Author Name" class="getinput" value="<?= $authorname ?>">
 
             <div class="priceandcate">
                 <div>
                     <p>Price</p>
                     <label for="number">Rs.</label>
-                    <input type="number" name="price" placeholder="Price" class="getinput" style="width: 100px;" value="<?= $price ?>">
+                    <input type="number" name="price" id="price" placeholder="Price" class="getinput" style="width: 100px;" value="<?= $price ?>">
                 </div>
 
                 <div>
@@ -58,8 +62,8 @@ require('config.php');
                 </div>
             </div>
 
-            <p>Published Date</p>
-            <input type="date" name="publishdate" class="getinput" value="<?= $publishdate ?>">
+            <p>Add a description</p>
+            <textarea type="text" name="description" id="description" class="getinput" style="width: 400px; height: 80px; padding: 10px;" ><?= $description ?></textarea>
 
         </div>
 
@@ -69,8 +73,15 @@ require('config.php');
                 <img id="updateimg" src="src/asserts/images/upimages/<?= $image ?>" alt="Current Image" width="100" height="100">
             </label>
             <input type="file" name="image" id="imageupload1" accept="image/*" onchange="preview_image(event)">
+            <input type="hidden" name="publishdate" id="publishdate" > 
         </div>
     </div>
+
+    <script>
+    publishdate = new Date(); 
+    document.getElementById("publishdate").value = publishdate;
+    
+    </script>
 
     <div class="submit">
         <label for="submitbtn1" class="submitbtn1">Submit</label>

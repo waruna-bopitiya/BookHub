@@ -16,7 +16,7 @@
     $authorname = $_POST["authorname"];
     $price = $_POST["price"];
     $category = $_POST['category'];
-    $publishdate = $_POST["publishdate"];
+    $description = $_POST["description"];
     $image = $_FILES["image"]["name"];
 
 
@@ -31,7 +31,7 @@
             echo "Failed to upload image";
         }
 
-        $sql = "UPDATE books SET bookName='$bookname', authorName='$authorname', price='$price', category='$category' , publishdate='$publishdate', image='$image' WHERE bookID='$bookID'";
+        $sql = "UPDATE books SET bookName='$bookname', authorName='$authorname', price='$price', category='$category' , description='$description', image='$image'   WHERE bookID='$bookID'";
         
         if(mysqli_query($con, $sql)){
 
@@ -56,7 +56,9 @@
                 echo "Failed to upload image";
             }
         
-            $sql = "UPDATE books SET bookName='$bookname', authorName='$authorname', price='$price', category='$category' , publishdate='$publishdate' WHERE bookID='$bookID'";
+
+
+            $sql = "UPDATE books SET bookName='$bookname', authorName='$authorname', price='$price', category='$category' , description='$description' WHERE bookID='$bookID'";
         
         if(mysqli_query($con, $sql)){
 

@@ -15,8 +15,9 @@
     $authorname = $_POST["authorname"];
     $price = $_POST["price"];
     $category = $_POST['category'];
-    $publishdate = $_POST["publishdate"];
+    $description = $_POST["description"];
     $image = $_FILES["image"]["name"];
+    $publishdate = $_POST['publishdate'];
 
     
 
@@ -29,14 +30,14 @@
                 echo "Failed to upload image";
             }
         
-            $sql = "INSERT INTO books (bookName , authorName , price ,	category , publishdate , image) VALUES ('$bookname', '$authorname','$price','$category','$publishdate', '$image')";
+            $sql = "INSERT INTO books (bookName , authorName , price ,	category , description , image, publishdate) VALUES ('$bookname', '$authorname','$price','$category','$description', '$image' , '$publishdate')";
         
         if(mysqli_query($con, $sql)){
 
                 echo "record added succesfully to database";
         }
         else{
-                echo "failed to add record to database" .mysqli_error($con);
+                echo "failed to add record to database".mysqli_error($con);
             
             }
         
