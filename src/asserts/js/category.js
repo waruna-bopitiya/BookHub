@@ -94,6 +94,8 @@ const books=[
 
 ];
 
+
+
 function loadBooks(category){
     const bookGrid=document.getElementById('book_grid');
     const categoryHeading= document.getElementById('category-heading');
