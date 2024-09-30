@@ -15,22 +15,45 @@
 
     <div class="trendingBooks">
         <div class="trending_title">
-            <h2 >TRENDING BOOKS</h2>
+            <h2 >NEW ARRIVALS</h2>
         </div>
 
         <div class="trnd_bk_list">
 
+            <!-- <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div> 
+            <div class="bkcontainer">
+                <img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" >
+                <div class="bkname">Sample Book<br>Rs.500.00</div>
+            </div>  
             <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
             <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
             <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
             <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
             <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
             <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
-            <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
-            <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
-            <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div>  
+            <div class="bkcontainer"><img src="src\asserts\images\Books\6249468706.jpg" width="100%" height="100%" ><div class="bkname">Sample Book<br>Rs.500.00</div></div> 
+             -->
 
-            
+             <?php
+                     require_once('config.php');
+
+                     $sql = "SELECT bookName , image, price FROM books ORDER BY bookID DESC";
+
+                        $result = $con->query($sql);
+
+                       
+
+                       while ($row =$result->fetch_assoc()) {
+                           
+                           echo "<div class='bkcontainer'>";
+                           echo "<img src='src/asserts/images/upimages/".$row['image']."' width='100%' height='100%'>";
+                           echo "<div class='bkname'><h3>".$row['bookName']."</h3> Rs.".$row['price']."</div>";
+                           echo "</div>";
+                    }
+               
+
+            ?>
+
         </div>
         
     </div>
