@@ -25,7 +25,20 @@ require_once('header.php')
                 <div>   
                         <p>Price</p>
                         <label for="number">Rs.</label>
-                        <input type="number" name="price" id="price" placeholder="Price" class="getinput" style="width: 100px;">
+                        <input type="text" name="price" id="price" placeholder="Price" class="getinput" style="width: 100px"; onblur="formatPrice()">
+                         <input type="hidden" name="formattedPrice" id="formattedPrice" />
+                        <script>
+                            
+                            function formatPrice() {
+                            let priceField = document.getElementById("price");
+                            let priceValue = parseFloat(priceField.value);
+    
+                            if (!isNaN(priceValue)) {
+                            // Ensure the value is formatted with two decimal places
+                            priceField.value = priceValue.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+                            }
+                            }
+                        </script>
                 </div>
                         
                 <div>
@@ -34,7 +47,7 @@ require_once('header.php')
                         <select name="category" id="category" class="getinput" style="width: 200px; height: 40px; margin-right: 30px;">
                           <option value="Fiction">Fiction</option>
                           <option value="Non-Fiction">Non-Fiction</option>
-                          <option value="MercedesChildren's Books">MercedesChildren's Books</option>
+                          <option value="MercedesChildren''s Books">MercedesChildren's Books</option>
                           <option value="Academic & Educational">Academic & Educational</option>
                           <option value="Lifestyle & Hobbies">Lifestyle & Hobbies</option>
                         </select>

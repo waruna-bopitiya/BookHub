@@ -17,8 +17,8 @@ function validate() {
         return false;
     }
     
-    if (!price) {
-        alert("Price cannot be empty");
+    if (!price || price <= 0 || price > 100000 || isNaN(price) || price < 100) {
+        alert("Please Enter Valid Price");
         return false;
     }
     

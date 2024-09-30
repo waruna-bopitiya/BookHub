@@ -30,7 +30,10 @@
                 echo "Failed to upload image";
             }
         
-            $sql = "INSERT INTO books (bookName , authorName , price ,	category , description , image, publishdate) VALUES ('$bookname', '$authorname','$price','$category','$description', '$image' , '$publishdate')";
+    
+    
+    
+    $sql = "INSERT INTO books (bookName , authorName , price ,	category , description , image, publishdate) VALUES ('$bookname', '$authorname','$price','$category','$description', '$image' , '$publishdate')";
         
         if(mysqli_query($con, $sql)){
 
