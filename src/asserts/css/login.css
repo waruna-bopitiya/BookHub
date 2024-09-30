@@ -8,16 +8,21 @@ body {
     align-items: center;  
     height: 100vh;
     background-size: cover;
+    background: linear-gradient;
+    background-color: #34daff;
     }
     
-.all {
-    display: flex;
-    background-color: white;
-    border-radius:8px;
-    width: 600px;
-    height: 100vh;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    .content{
+        display: flex;
+        margin-left: 60%;
+    }
+    .form{
+        width: 60%;
+        margin: 50px 10px 0px 10px;
+        background-color:white;
+        padding:20px;
+        border-radius:8px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
     }
     
 form {
