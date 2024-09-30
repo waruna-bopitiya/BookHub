@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="src/asserts/css/publisher.css">
+    <link rel="stylesheet" href="src/asserts/css/adminheader.css">
     <title>Publisher | Boookhub</title>
     <script src="src/asserts/js/javascript.js"></script>
 </head>
@@ -43,10 +43,19 @@
              <div class="menuimage">
                      <img src="src\asserts\images\bookhublogotransparent.png" alt="logo" width="200px" height="200px">
              </div>
-            <div>
-                     <h1>Publisher potral</h1>
-            </div>
-           
+            
+           <div class="menu">
+                    <div class="badmin">
+                     <h1>Bookhub Admin</h1>
+                    </div>
+                    <div class="naveul"><ul>
+                        <li class="menu-item"><a href="pub_added.php">Books</a></li>
+                        <li class="menu-item"><a href="#">Categories</a></li>
+                        <li class="menu-item"> <a href="#">About Us</a></li>
+                        <li class="menu-item"><a href="#">Contact Us</a></li>
+                        <li class="menu-item"><a href="#">Return Policy</a></li>
+                    </ul></div>
+            </div> 
 
     </div>
 

@@ -69,3 +69,14 @@ function preview_image(event){
             reader.readAsDataURL(event.target.files[0]);
            
         }
+
+
+function validatesearch(){
+    const searchname = document.getElementById("searchname").value.trim();
+
+    if (!searchname || searchname == "" || searchname == null || searchname == undefined || searchname == " " ) {
+        alert("Search cannot be empty");
+        return false;
+    }
+    return true;
+}

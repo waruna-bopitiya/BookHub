@@ -7,7 +7,8 @@
     <title>
             <?php echo $title; 
             ?> | BookHub</title>
-    <title>Document</title>
+    <script src="src/asserts/js/javascript.js"></script>
+    <script src="https://kit.fontawesome.com/2fd38a9fa7.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="title_bar">
@@ -51,17 +52,17 @@
         </div>
 
         <div class="searchandmenu">
+                    <form action="searchresult.php" method="GET" onsubmit="return validatesearch()">
                      <div class="search-container">
-            
-                        <input type="text" class="search-box" placeholder="Search in BookHub">
-                        <button class="search-button"> <img src="src\asserts\images\menu bar\icons8-search-50.png" width="25px" height="25px">  </button>
-                     </div>
+                        <input type="text" class="search-box" placeholder="Search in BookHub" name="searchname" id="searchname" value="<?php if (isset($_GET['searchname'])){echo $_GET['searchname'];}?>" >
+                        <input type="submit" class="search-button" name="submit" >  
+                     </div></form>
 
 
 
                  <div class="menu">
                     <ul>
-                        <li class="menu-item"><a href="#">Home</a></li>
+                        <li class="menu-item"><a href="index.php">Home</a></li>
                         <li class="menu-item"><a href="#">Categories</a></li>
                         <li class="menu-item"> <a href="#">About Us</a></li>
                         <li class="menu-item"><a href="#">Contact Us</a></li>
