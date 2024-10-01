@@ -55,7 +55,7 @@
                     <form action="searchresult.php" method="GET" onsubmit="return validatesearch()">
                      <div class="search-container">
                         <input type="text" class="search-box" placeholder="Search in BookHub" name="searchname" id="searchname" value="<?php if (isset($_GET['searchname'])){echo $_GET['searchname'];}?>" >
-                        <input type="submit" class="search-button" name="submit" >  
+                        <input type="submit" class="search-button" name="submit" value="Search" >  
                      </div></form>
 
 
