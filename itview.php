@@ -22,6 +22,7 @@ include_once('bookhubheader.php');
         if ($result->num_rows > 0) {
 
             $row = $result->fetch_assoc();
+
             $name = $row['bookName'];
             $authorname = $row['authorName'];
             $price = $row['price'];
@@ -68,9 +69,14 @@ include_once('bookhubheader.php');
 
 
                 <div class="buttons">
-                    <form action="">
-                        <input type="submit" value="Add to Cart" class="addtocart">
-                    </form>  
+            
+                    <form action="cartinsert.php" method="POST" enctype="multipart/form-data">
+                        
+                        <input type="hidden" value="<?=$bookID?>" id="bookID" name="bookID">
+                        <input type="submit" value="Add to Cart" name="submit" class="addtocart">
+                        </form>
+
+                    
                     <form action="">
                         <input type="submit" value="Buy it Now" class="buyitnow">
                     </form>

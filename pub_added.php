@@ -71,6 +71,8 @@ require_once('header.php')
         echo "</tbody></table>";
 
         echo "</div>";
+
+        mysqli_close($con);
     ?>
 
 

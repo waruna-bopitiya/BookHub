@@ -1,0 +1,239 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body{
+    background-color:rgb(185, 250, 231);
+}
+
+.cart {
+    max-width: 1000px;
+    max-height: 500px;
+    padding: 20px;
+    background-color: rgb(146, 255, 190);
+    border-radius: 15px;
+    margin: 25px ;
+    margin-left: 250px;
+    
+}
+
+ /* header */
+
+h1{
+    text-align: center;
+    font-size:40px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    margin-bottom: 30px;
+    margin-top: 200px;
+    color: rgb(57, 56, 56);
+}
+
+.book1{
+    display:inline-flex;
+    justify-content: space-around;
+    padding: 30px;
+    background-color: rgb(176, 176, 176);
+    border: rgb(0, 0, 0) 5px solid;
+    margin: 50px;
+    
+
+}
+
+.class0{
+    display: flex;
+    align-items: center;
+}
+
+.class0 input{
+    transform: scale(2);
+    margin-right: 25px;
+}
+
+.class0 img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.class1{
+    flex: 2;
+    margin-left: 50px;
+}
+
+/* book name */
+
+.class1 h2{
+    font-size: 30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: normal;
+    margin-bottom: 10px;
+}
+
+/* book description */
+
+.class1 p{
+    font-size: 16px;
+    font-style: oblique;
+    color: rgb(62, 62, 62);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* price */
+
+.class2 h3{
+    font-size: 30px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+/* qty */
+
+.class3 h4{
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+    color: rgb(71, 70, 70);
+    padding: 15px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.class4 button{
+    padding: 10px;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.class4 input{
+    width: 40px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* favourite & delete */
+.class5{
+    display: flex;
+    margin-left: 30px;
+}
+
+.class5 button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 50px;
+    margin-left: 10px;
+}
+
+.class5 input{
+    transform: scale(1.75);
+}
+
+.class6{
+    flex: 2;
+    margin-left: 20px;
+}
+
+.class6 legend{
+    border: 3px solid black;
+    padding: 15px;
+    border-radius: 8px;
+    width: 250px;
+    height: 220px;
+    text-align: center;
+    background-color: rgb(115, 231, 202);
+    margin-left: 40px;
+}
+
+/* summary details */
+
+.summary {
+    display: none; /* Hide all messages by default */
+    max-width: 900px;
+    max-height: 550px;
+    padding: 20px;
+    background-color: rgb(71, 163, 139);
+    border-radius: 10px;
+    margin: 20px ;
+    margin-left: 300px;
+}
+
+.summary h2{
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.cal{
+    font-size: 20px;
+}
+
+.cal h5{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Coupon */
+
+.coupon h5{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0px;
+    margin-top: 25px;
+}
+
+.coupon button{
+    margin-left: 750px;
+    margin-top: 0%;
+    font-size: 20px;
+    padding: 5px;
+    font-style: oblique;
+    color: rgb(62, 62, 62);
+    border: 4px solid rgb(62, 62, 62);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.coupon input{
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 3px;
+}
+
+/* chechout */
+
+.checkout{
+    text-align: center;
+    font-size: 30px;
+    font-style: oblique;
+    font-family: initial;
+    width: 700px;
+    margin-left: 80px;
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 12px;
+    color: rgb(73, 73, 73);
+    background-color: rgb(127, 255, 208);
+    cursor: pointer;
+    margin-bottom: 10%;
+}
+
+
+
+.heart {
+    width: 30px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 40px;
+    background-image: url('../images/favorite\ \(1\).png'); /* Replace with your empty heart image */
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: background-image 0.3s ease;
+}
+
+.heart.filled {
+    background-image: url('../images/favorite.png'); /* Replace with your filled heart image */
+}

@@ -146,5 +146,8 @@
 </div>
 </body>
 </html>
+<?php
+mysqli_close($con);
+?>
 
 <!-- lmgld nrgn rnoerlk nerhoen rlern  -->
