@@ -22,21 +22,16 @@
 <br>
 <br>
 <br>
-
-    <header>
-            <div class="header-container">
-                <nav>
-                    <a href="#">Home</a> | <a href="#" class="active">Contact US</a>
-                </nav>
-            </div>
-    </header>
-
+<br>
+<br>
+<br>
+<br>
 
     <div class="container">
         <section class="contact-header">
             <h1>Contact Us</h1>
-            <p>Bookazone Pvt Ltd is proud to present www.books.lk, the pioneer, all online bookstore in Sri Lanka. We offer the most extensive range of books for sale in Sri Lanka, sourced from THE USA, Europe to the Far East and India. A collection of old and rare works hitherto not offered on most online bookstores, are also available for the discerning bibliophile.</p>
-            <p>www.books.lk is owned and operated by Sri Lankans who are experienced e-commerce entrepreneurs and book lovers themselves. We provide a service that satisfies a long-awaited need of other book lovers in Sri Lanka and beyond: access to purchasing all kinds of books from anywhere in the island. Our commitment is to provide an excellent and dedicated service that ensures ease of ordering and payment and is complemented with prompt and free delivery of the widest range of titles to our customers.</p>
+            <p>Bookazone Pvt Ltd is proud to present www.bookhub.lk, the pioneer, all online bookstore in Sri Lanka. We offer the most extensive range of books for sale in Sri Lanka, sourced from THE USA, Europe to the Far East and India. A collection of old and rare works hitherto not offered on most online bookstores, are also available for the discerning bibliophile.</p>
+            <p>www.bookhub.lk is owned and operated by Sri Lankans who are experienced e-commerce entrepreneurs and book lovers themselves. We provide a service that satisfies a long-awaited need of other book lovers in Sri Lanka and beyond: access to purchasing all kinds of books from anywhere in the island. Our commitment is to provide an excellent and dedicated service that ensures ease of ordering and payment and is complemented with prompt and free delivery of the widest range of titles to our customers.</p>
             <p>Our online order service is simple with highly secure methods of payment, which includes an innovative, local method to enable customers who do not wish to pay by credit card, to buy books from www.books.lk. We have introduced a method by which customers can pay for the books they order online, with a physical payment at a bank.</p>
         </section>
 
@@ -72,16 +67,20 @@
             </div>
         </section>
     </div>
+
+    
+    <header>
+            <div class="header-container">
+                <nav>
+                    <a href="#">Home</a> | <a href="#" class="active">Contact US</a>
+                </nav>
+            </div>
+    </header>
+
 </body>
 </html>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 
 
 <?php

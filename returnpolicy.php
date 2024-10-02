@@ -23,13 +23,7 @@
 <br>
 <br>
 <br>
-    <header>
-        <div class="header-container">
-            <nav>
-                <a href="#">Home</a> | <a href="#" class="active">Return Policy</a>
-            </nav>
-        </div>
-    </header>
+
 
     <div class="content-container">
         <h1>Returns Policy</h1>
@@ -50,6 +44,15 @@
         <p>If you have any questions regarding your order, please feel free to contact us at:<br>
         Tel. +94 773 205555 | +94 773 441066 (9:00 A.M. to 5:00 P.M. Mon. – Fri. Sri Lankan Standard Time)</p>
     </div>
+
+    <header>
+        <div class="header-container">
+            <nav>
+                <a href="#">Home</a> | <a href="#" class="active">Return Policy</a>
+            </nav>
+        </div>
+    </header>
+    
 </body>
 </html>
 

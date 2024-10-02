@@ -7,13 +7,13 @@
 
 header {
     background-color: #333;
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 .header-container {
     width: 20%;
     margin: 0 auto;
-    text-align: left;
+    text-align: center;
 }
 
 header nav a {
