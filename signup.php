@@ -9,8 +9,11 @@
 <body>
     <div class="content">
         <div class="form">
-            <header><h2>Sign Up</header></h2></header><br>
+            <h2>Sign Up</h2></header><br>
             <form id="signupForm" action="signupinsert.php" method="post">
+            <div class="field input">
+            <input type="text" id="uid" name="uid" placeholder="User Id" required/>
+            <br><br>
             <div class="field input">
             <input type="text" id="fname" name="fname" placeholder="First Name" required/>
             <br><br>
