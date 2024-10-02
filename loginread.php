@@ -3,6 +3,7 @@
 
 require 'config.php';
 
+
 $sql="SELECT userID,firstName,lastName,email,pswd FROM user ";
 
 $result=$con->query($sql);
@@ -23,6 +24,3 @@ else{
 $con->close();
 ?>
 
-//get the user data by passing the username as a parameter through SQL
-//Compare the  retrived psw vs form psw
-// If matched approve login. If not display error.

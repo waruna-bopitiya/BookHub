@@ -12,7 +12,7 @@
             <h2>Account Info</h2></header><br>
             <form id="profileForm" action="profileupdate.php" method="post">
             <div class="field input">
-            <input type="text" id="fname" name="fname" placeholder="First Name" value="waruna" required/>
+            <input type="text" id="fname" name="fname" placeholder="First Name" required/>
             <br><br>
             <div class="field input">
             <input type="text" id="lname" name="lname" placeholder="Last Name" required/>

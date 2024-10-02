@@ -1,20 +1,27 @@
 body{
     font-family:'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background: linear-gradient;
+    background-color: #F5FFFA;
 }
 .content{
     display: flex;
-    margin-left: 60%;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
 }
 .form{
-    width: 60%;
-    margin: 50px 10px 0px 10px;
+    width: 800px;
+    margin: 0px 10px;
     background-color:white;
     padding:20px;
     border-radius:8px;
     box-shadow:0 0 10px rgba(0,0,0,0.1);
 }
-.field input {
+.form .field input {
     height: 40px;
     width: 90%; 
     font-size: 16px;
@@ -22,7 +29,6 @@ body{
     border-radius: 5px;
     border: 1px solid #ccc;
     outline: none;
-    margin-bottom: 10px;
 } 
 .form header{
     font-size: 25px;
@@ -68,13 +74,4 @@ p a {
 
 p a:hover {
     text-decoration: underline;
-}
-
-.fieldInput {
-    margin-bottom: 20px;
-}
-
-
-header {
-    text-align: center;
 }

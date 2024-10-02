@@ -26,11 +26,11 @@
                 <div class="form">
                     <div class="form-box">
                         <h2 class="login-title">Sign in</h2><br><br><br>
-                        <form action="logininread.php" method="post" onsubmit="validateForm(event)">
+                        <form action="loginread.php" method="post" onsubmit="validateForm(event)">
                             <label for="email">Username</label>
                             <input type="text" id="email" name="email" placeholder="E-mail" required />
                             <label for="pwd">Password</label>
-                            <input type="password" id="pwd" name="pwd" placeholder="Password">
+                            <input type="password" id="pwd" name="pwd" placeholder="Password" required/>
                             <button class="login-button" name="submit" id="signinBtn" type="submit">Login</button>
                         </form>
                         <p>Not a member yet? <a href="signup.php">SIGNUP</a></p>
