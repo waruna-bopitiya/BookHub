@@ -20,14 +20,16 @@
 <body >
 <div class="all">
     <div class="content">
+<body style="background-image: url('./src/assets/images/loginbg.png');">
+<div class="content">
+    <div class="form">
+        <div class="form-box">
         <h3 class="title">Sign in</h3><br><br><br>
         <form action="logininread.php" method="post" onsubmit="validateForm(event)">
             <label for="email">Username</label>
             <input type="text" id="email" name="email" placeholder="E-mail" required/>
-            
             <label for="pwd">Password</label>
             <input type="password" id="pwd" name="pwd" placeholder="Password">
-            <br><br>
             <button name="submit" id="signinBtn" type="submit" >Login</button>
         </form>
         <p>Not a member yet? <a href="signup.php">SIGNUP</a></p>

@@ -6,7 +6,6 @@ body {
     width: 100vw;
     height:90vh;
     background-size: cover;
-    
 }
 
 .all {
@@ -16,6 +15,21 @@ body {
     width: 500px;
     height: 600px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient;
+    background-color: #34daff;
+    }
+    
+    .content{
+        display: flex;
+        margin-left: 60%;
+    }
+    .form{
+        width: 60%;
+        margin: 50px 10px 0px 10px;
+        background-color:white;
+        padding:20px;
+        border-radius:8px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
     }
     
 form {
@@ -109,3 +123,6 @@ p a:hover {
     text-decoration: underline;
     }
 
+h2 {
+    text-align: center;
+}

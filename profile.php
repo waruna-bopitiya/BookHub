@@ -10,7 +10,7 @@
     <div class="content">
         <div class="form">
             <h2>Account Info</h2></header><br>
-            <form id="profileForm" action="profileinsert.php" method="post">
+            <form id="profileForm" action="profileupdate.php" method="post">
             <div class="field input">
             <input type="text" id="fname" name="fname" placeholder="First Name" value="waruna" required/>
             <br><br>
