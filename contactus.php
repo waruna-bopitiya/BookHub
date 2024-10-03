@@ -60,7 +60,7 @@
     <section class="addcmnt">
                 <h3>Add Comment:</h3><br>
                 <form method="POST">
-                    <span>App Name:</span>
+                    <span>Name:</span>
                     <input type="text" name="appName" required><br><br>
                     <span>Comment:</span><br><br>
                     <textarea name="comment" cols="70" rows="5" required></textarea><br><br>
