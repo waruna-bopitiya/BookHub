@@ -67,8 +67,6 @@
                     <button type="submit" name="submit_comment" class="cmnt-btn">Submit</button>
                 </form>
     </section>
-    
-
 
     <section class="cmnt-list">
                 <h3>All Comments:</h3><br>
