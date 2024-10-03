@@ -27,22 +27,18 @@
 
     <div class="content-container">
         <h1>Returns Policy</h1>
-        <p>Returns are acceptable ONLY for defects or errors for which we are responsible, for a period up to but not exceeding 7 days from the Books.lk (our) date of shipment.</p>
+        <p>At <strong>BookHub</strong>, your satisfaction is our priority, and we want you to be delighted with every purchase. However, if for any reason you're not completely satisfied with your order, our flexible return policy makes it easy for you to return your items.</p>
 
-        <p><strong>WARNING:</strong> <strong>DO NOT</strong> just return an item(s) without contacting us and obtaining a <strong>Return Merchandise Authorization (RMA)</strong> number! Plus we need to give you the correct address to return your item(s) to. Return freight is the customer’s responsibility. Items that are shipped back to us without following the policy will NOT be entitled to any refund. You may return an item for replacement within 7 days of the Books.lk (our) shipment date. We will take back your purchase provided the item is unused and in its original packaging.</p>
+        <p><strong>WARNING:</strong> <strong>Return Window : </strong> We offer a 30-day return window from the date of delivery. During this period, you can return any eligible items for a full refund or exchange, provided the item is in its original condition.</p>
 
-        <p>*Please note that all returned merchandise must be prepaid by the purchaser, unless stated and permitted otherwise by Books.lk. Shipping and handling charges (to and from purchaser) are non-refundable and will be deducted from the refund amount before a refund or exchange credit is issued. The total refund credit amount will be the purchase order amount (or partially discounted refund of the purchase order amount, as decided by us, Books.lk the merchant, in special cases and circumstances), less shipping charges (to and from purchaser), unless stated and permitted otherwise by Books.lk (For returns where shipping charges were prepaid by the purchaser, as followed per our return policy instructions, only shipping charges to the purchaser will be deducted from the refund credit amount.)</p>
+        <p><strong>Eligibility Criteria : </strong>To qualify for a return, the book must be in its original condition, without signs of use or damage, and returned in its original packaging. Please note that certain items, such as digital products or sale items, may be non-returnable, and we recommend reviewing the product page for any specific return information.</p>
 
-        <p>You may want to insure your return, as we cannot be responsible for lost or misdirected returns. If you paid for your order by credit card, a credit (less shipping charges) will be issued and will appear on your credit card billing statement, unless an agreement is made between the merchant, Books.lk and the purchaser, for the refund credit to be issued by other means. All returns must be accompanied by the packing slip. When you return an item, follow the instructions on the packing slip, and most importantly, please indicate the reason for the return. Please contact us by phone on +94 773 205555 | +94 773 441066 (9:00 A.M. to 5:00 P.M. Mon.-Fri. Sri Lankan Standard Time) or via e-mail on the <a href="#">Contact Us</a> page as to where to return the merchandise.</p>
+        <p><strong>How to Return : </strong> To initiate a return, simply contact our customer service team at <a href="#">support@bookhub.com</a> or call us at +94 71 110 2929. Our team will guide you through the return process and provide you with a return shipping label if necessary. Please ensure the item is securely packaged before returning it to avoid any damage during transit.</p>
 
-        <p>*Please note that all shipments are inspected, checked, and well packed before leaving our warehouse. Any damage that occurs may be solely through negligence of the carrier. Visible Damage: if the shipment is delivered to you in a visibly damaged condition, insist on notation of this damage by the delivery carrier. *It is important that you notify Books.lk immediately upon noticing the damage.</p>
+        <p><strong>Refund Process : </strong>Once we receive your return, our team will inspect the item and notify you of the refund status. Approved returns will be refunded within 7-10 business days to your original payment method. Please note that the cost of return shipping may be deducted from your refund unless the return is due to a BookHub error</p>
 
-        <p>Concealed damage: Notify Books.lk immediately upon noticing the damage. You must retain the outside carton and packing materials. Books.lk or the carrier will advise you whether to hold the damaged item(s) for a physical inspection or return the item(s).</p>
+        <p>Thank you for shopping with BookHub, and we appreciate your understanding of our return policy!</p>
 
-        <p>In cases where a damaged merchandise report is made to Books.lk, as per our company policy and procedure, and Books.lk and/or the carrier, after return of merchandise by the customer, and an inspection of the merchandise by us or the carrier, deems that the merchandise in fact has arrived damaged to the customer, Books.lk will replace the damaged goods with an identical item. (If an identical item is no longer available, the damaged merchandise will be replaced with an item of similar value, as per mutual agreement between the customer and Books.lk.)</p>
-
-        <p>If you have any questions regarding your order, please feel free to contact us at:<br>
-        Tel. +94 773 205555 | +94 773 441066 (9:00 A.M. to 5:00 P.M. Mon. – Fri. Sri Lankan Standard Time)</p>
     </div>
 
     <header>

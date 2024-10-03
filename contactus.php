@@ -17,9 +17,10 @@
     <div class="container">
         <section class="contact-header">
             <h1>Contact Us</h1>
-            <p>Bookazone Pvt Ltd is proud to present www.bookhub.lk, the pioneer, all online bookstore in Sri Lanka. We offer the most extensive range of books for sale in Sri Lanka, sourced from THE USA, Europe to the Far East and India. A collection of old and rare works hitherto not offered on most online bookstores, are also available for the discerning bibliophile.</p>
-            <p>www.bookhub.lk is owned and operated by Sri Lankans who are experienced e-commerce entrepreneurs and book lovers themselves. We provide a service that satisfies a long-awaited need of other book lovers in Sri Lanka and beyond: access to purchasing all kinds of books from anywhere in the island. Our commitment is to provide an excellent and dedicated service that ensures ease of ordering and payment and is complemented with prompt and free delivery of the widest range of titles to our customers.</p>
-            <p>Our online order service is simple with highly secure methods of payment, which includes an innovative, local method to enable customers who do not wish to pay by credit card, to buy books from www.books.lk. We have introduced a method by which customers can pay for the books they order online, with a physical payment at a bank.</p>
+            <p>"BookHub is your ultimate destination for all things books. Whether you’re an avid reader, a student seeking academic resources, or someone looking to explore new genres, we’ve got something for everyone. Our extensive catalog spans fiction, non-fiction, self-help, academic texts, and more, making it easy to find the right book for any reader.</p>
+            <p>At BookHub, we believe in making book shopping convenient and enjoyable. Our intuitive search feature helps you quickly find books by title, author, or genre, and detailed descriptions and reviews ensure that you can make informed decisions before purchasing.</p>
+            <p>But we’re more than just an online bookstore—we’re a community. Our blog offers insightful articles, book recommendations, and author interviews to enrich your reading experience. Plus, we host virtual events such as book clubs and author talks to connect book lovers from all over the world.</p>
+            <p>But we’re more than just an online bookstore—we’re a community. Our blog offers insightful articles, book recommendations, and author interviews to enrich your reading experience. Plus, we host virtual events such as book clubs and author talks to connect book lovers from all over the world.</p>
         </section>
 
         <section class="contact-info">
