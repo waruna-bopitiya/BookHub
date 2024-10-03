@@ -33,8 +33,9 @@ body {
 
 .container {
     width: 80%;
-    margin: 0 auto;
+    margin: 200px auto;
     padding: 20px;
+
 }
 
 .contact-header h1 {
@@ -86,4 +87,254 @@ body {
 
 .info-text a:hover {
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+main {
+    padding: 10px 20px 0px 20px;
+}
+
+/* App Details Section */
+.app-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    /* background-color: rgb(174, 226, 236); */
+    margin: 60px 150px;
+    border-radius: 8px;
+    border-color: #1a1614;
+    box-shadow: -1px 5px 15px black;
+    opacity: 1;
+    backdrop-filter: blur(8px);
+    color: white;
+}
+
+/* App Meta Section (Left of Description) */
+.app-meta {
+    width: 300px; /* Fixed width for the left column */
+    margin-right: 20px;
+}
+
+.app-image {
+  width: 150px;
+  height: 150px;
+  margin-right: 20px;
+  margin-left: 50px;
+}
+
+.app-image img{
+  width: 100%;
+  border-radius: 10px;
+}
+.name {
+  font-size: 20px;
+  margin-left: 75px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.rating-size {
+  font-size: 16px;
+  margin-top: 35px;
+  margin-left: 150px;
+  font-weight: bolder;
+}
+
+.rating {
+  font-size: 16px;
+  margin: 5px 0;
+  margin-top: -100px;
+  margin-left: 170px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.stars {
+    color: gold;
+    font-size: 20px;
+    margin: 5px 0;
+    margin-top: -140px;
+    margin-left: -10px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.rate {
+  font-size: 30px;
+  margin: 5px 0;
+  margin-top: 10px;
+  margin-left: 4px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.size {
+  font-size: 16px;
+  margin: 5px 0;
+  margin-top: -105px;
+  margin-left: 275px;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+.Asize {
+  font-size: 30px;
+  margin: 5px 0;
+  margin-top: 15px;
+  margin-left: -5px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.mb {
+  font-size: 20px;
+  margin: 5px 0;
+  margin-top: 30px;
+  margin-left: 4px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.install-btn {
+    padding: 5px;
+    background-color: #4c37e7;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    text-align: center;
+    text-size-adjust: 18px;
+    border-radius: 20px;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.install-btn:hover {
+  transform: scale(1.1); 
+}
+
+.plus-btn {
+    padding: -10px;
+    background-color: #07ad49;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    text-size-adjust: 18px;
+    border-radius: 100px;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 3px;
+}
+.plus-btn:hover {
+  transform: scale(1.1); 
+}
+
+.description {
+  width: 50%;
+  margin-left:0px;
+
+}
+
+.description h3 {
+    margin-bottom: 10px;
+}
+
+.addcmnt {
+    width: 49%;
+    margin-left: 380px;
+    margin-right: 50px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: -1px 5px 15px black;
+    border-radius: 10px;
+    margin-bottom: 2%;
+    opacity: 1;
+    backdrop-filter: blur(8px);
+}
+
+.addcmnt input{
+  border-radius: 5px;
+}
+
+#cmnt-btn{
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+#cmnt-btn:hover{
+  transform: scale(1.1);
+}
+
+.cmnt-list{
+    width: 49%;
+    margin-left: 380px;
+    margin-right: 50px;
+    padding: 20px;
+    border: 5px solid #ccc;
+    box-shadow: -1px 5px 15px black;
+    border-radius: 10px;
+    margin-bottom: 8%;
+    opacity: 1;
+    backdrop-filter: blur(8px);   
+}
+
+.cmnt-list input,textarea{
+  border-radius: 5px;
+}
+
+.comment_details{
+  color: rgb(0, 0, 0);
+}
+
+.updatebtn{
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color:#07ad49;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+
+.updatebtn:hover{
+  transform: scale(1.1);
+}
+
+.deletebtn{
+
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  background-color:red;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  margin-top: 10px;
+}
+
+.deletebtn:hover{
+  transform: scale(1.1);
 }

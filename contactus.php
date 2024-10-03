@@ -13,19 +13,6 @@
 </head>
 <body>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
     <div class="container">
         <section class="contact-header">
@@ -68,7 +55,50 @@
         </section>
     </div>
 
+
+    <section class="addcmnt">
+                <h3>Add Comment:</h3><br>
+                <form method="POST">
+                    <span>App Name:</span>
+                    <input type="text" name="appName" required><br><br>
+                    <span>Comment:</span><br><br>
+                    <textarea name="comment" cols="70" rows="5" required></textarea><br><br>
+                    <button type="submit" name="submit_comment" class="cmnt-btn">Submit</button>
+                </form>
+    </section>
     
+
+
+    <section class="cmnt-list">
+                <h3>All Comments:</h3><br>
+                  <?php if ($comments_result->num_rows > 0): ?>
+                    <?php while($row = $comments_result->fetch_assoc()): ?>
+                        <div class="comment_details">
+                            <h4><?php echo "App Name : ".$row['app_name']; ?></h4><br>
+                            <h4><?php echo "Comment : ".$row['comment']; ?></h4><br>
+
+                            <!-- Edit Comment Form -->
+                            <form method="POST">
+                                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                <label>Edit App Name :</label><input type="text" name="appName" required><br><br>
+                                <label>Edit Comment: </label><textarea name="comment" cols="50" rows="3" required></textarea><br>
+                                <button type="submit" name="update_comment" class="updatebtn">Update</button>
+                            </form>
+
+                            <!-- Delete Comment Form -->
+                            <form method="POST">
+                                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                <button type="submit" name="delete_comment" class="deletebtn">Delete</button><br><br>
+                            </form>
+                        </div>                     
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <p>No comments yet!</p>
+                <?php endif; ?>
+    </section>
+
+
+
     <header>
             <div class="header-container">
                 <nav>
