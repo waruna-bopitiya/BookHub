@@ -1,3 +1,29 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION["email"])) { 
+        $email = $_SESSION['email'];
+    require_once('config.php');
+    $sql3 = "SELECT * FROM user WHERE email = '$email' And userType='client'";
+
+    $result = $con->query($sql3);
+
+        if ($result->num_rows > 0) {
+
+            $row = $result->fetch_assoc();
+
+            $userID = $row['userID'];
+            $firstName = $row['firstName'];
+            $lastName = $row['lastName'];
+            $userType = $row['userType'];
+
+
+        } 
+        }
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +57,28 @@
 
 
         <div class="title_grp" style="justify-content: right;"><!-- this is the BookHub name -->
+
+            
             <img src="src\asserts\images\title bar\icons8-account-30.png" alt="login" width="25px" height="25px">
-            sign in / sign up
+            <?php
+            if(isset($_SESSION["email"])) { 
+                echo "<h4>Hi..! ".$firstName."</h4>";
+            }
+            ?>
+            
+            <?php
+            if(isset($_SESSION["email"])) { ?>
+                <form action="logout.php" method="POST">
+                <button type="hidden" name="logoff" id="submit" class="loginbtn">LOG OUT </button>
+            </form><?php
+            }
+
+            else{
+            echo "<a href='login.php'><button type='hidden' class='loginbtn' name='logoff' id='submit'>LOG IN</button></a>";
+            }
+            ?>
+
+
         </div>
 
 
@@ -72,8 +118,9 @@
          </div>
 
          <div class="logo_menubar1">
+                <a href="cart.php">
                  <img src="src\asserts\images\menu bar\cart.png" alt="LOGO" width="100px" height="100px" margin-bottom="0px" >
-                    <h3>My Cart</h3>
+                    <h3>My Cart</h3></a>
          </div>
             
         </div>

@@ -65,6 +65,30 @@ h5{
 
 }
 
+.loginbtn{
+    background-color: rgb(32, 32, 160);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.profilebtn{
+    background-color: rgb(32, 32, 160);
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    padding: 5px;
+    margin-left: 10px;
+    height: 25px;
+    border-radius: 5px; 
+    display: inline;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .menu_bar {
     background-color: #008091;
     width: 100%;

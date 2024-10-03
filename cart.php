@@ -1,5 +1,10 @@
+
+
 <?php $title="Shopping Cart"; 
     require_once('bookhubheader.php');
+
+    if(isset($_SESSION["email"])) { 
+        
 ?>
 
 
@@ -92,6 +97,41 @@
     
 
     <script src="src/asserts/js/cart.js"></script>
+
+
+<?php }
+else {
+?>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;">Please Log in to view cart</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+<?php }?>
 
 </body>
 </html>
