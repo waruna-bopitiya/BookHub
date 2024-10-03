@@ -26,7 +26,7 @@
         <section class="contact-info">
             <div class="info-item">
                 <div class="icon">
-                    <img src="location-icon.png" alt="Location Icon">
+                    <img src="src/asserts/images/web.png" alt="Location Icon">
                 </div>
                 <div class="info-text">
                     <h2>Site</h2>
@@ -36,7 +36,7 @@
 
             <div class="info-item">
                 <div class="icon">
-                    <img src="phone-icon.png" alt="Phone Icon">
+                    <img src="src/asserts/images/phone3.png" alt="Phone Icon">
                 </div>
                 <div class="info-text">
                     <h2>Contact Number</h2>
@@ -46,7 +46,7 @@
 
             <div class="info-item">
                 <div class="icon">
-                    <img src="mail-icon.png" alt="Mail Icon">
+                    <img src="src/asserts/images/mail2.png" alt="Mail Icon">
                 </div>
                 <div class="info-text">
                     <h2>Contact via Mail</h2>

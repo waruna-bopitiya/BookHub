@@ -35,6 +35,7 @@ header nav a.active {
 .content-container {
     width: 80%;
     margin: 150px auto;
+    margin-right: 0;
     padding: 20px;
     background-color: #fff;
     border-radius: 8px;
