@@ -36,7 +36,7 @@ if ($result2->num_rows == 1) {
     $_SESSION['email'] = $email;
     $userType = "admin";
     $_SESSION['userType'] = $userType;
-    header('Location: AdminHome.php');
+    header('Location: publisher.php');
     exit();
 } else {
     

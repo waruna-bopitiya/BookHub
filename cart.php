@@ -4,6 +4,23 @@
     require_once('bookhubheader.php');
 
     if(isset($_SESSION["email"])) { 
+
+        $email = $_SESSION['email'];
+        require_once('config.php');
+            $sql3 = "SELECT * FROM user WHERE email = '$email' And userType='client'";
+
+        $result3 = $con->query($sql3);
+
+        if ($result3->num_rows > 0) {
+
+            $row = $result3->fetch_assoc();
+
+            $userID = $row['userID'];
+            $firstName = $row['firstName'];
+            $lastName = $row['lastName'];
+            $userType = $row['userType'];
+
+        } 
         
 ?>
 
@@ -15,65 +32,92 @@
     <link rel="stylesheet" href="src/asserts/css/cart.css">
 </head>
 
-<body>
+<body>  
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <?php
 
-
-    <h1>Your Shopping Cart......</h1>
-
-    <!--book1---------------------------------------------------------------------------------------------------------------->
-    
-
-        <div class="book1">
-            <div class="class0">
-                <input type="checkbox" id="checkbox1">
-                <img src="./images/img1.jpeg" alt="book image">
-            </div>
-                
-            <div class="class1">
-                <h2>Forget me not</h2><br>
-                <p>It’s not easy to love broken people, Yumi San. They have to be 
-                    hugged tightly. With gentle but firm love. But those sharp-edged 
-                    broken pieces hurt the loved one who embraces them. He is also cut. 
-                    I am sure, “Love is a sacrifice, a man with a kind eyebrow who fell 
-                    in love with a broken woman for the first time in this world. A woman 
-                    with a big heart who loved a broken man. 
-                </p>
-            </div>
-            
-            <div class="class6">
-                <legend>
-                <div class="class2">   
-                    <h3>Rs.2500/=</h3>
-                </div>
-                
-                <div class="class3">
-                    <h4>Qty</h4>
-                </div>
-                
-                <div class="class4" id="set1">
-                    <input type="button" value="-" class="decrement">
-                    <input type="text" value="1" class="value" readonly> <!-- Make input read-only -->
-                    <input type="button" value="+" class="increment">
-                </div>
-                
-                <div class="class5">
-                    <div class="heart" id="heart1"></div>
-                    <button class="delete">🗑</button>
-                </div>
-                </legend>
-            </div>
+$sql = "SELECT books.bookID, books.bookName, books.price , books.image FROM books INNER JOIN cart ON books.bookID = cart.bookID WHERE cart.userID = '$userID'";
         
+$result = $con->query($sql);
+if ($result->num_rows > 0){
+?>
+
+<div class="pgcontain"> 
+<div class="side1"> 
+<br>
+        
+        <br>
+        <br>
+<?php
+
+$subtotal=0;
+    while ($row = $result->fetch_assoc()) {
+?>
+
+        
+       
+        <div class="itemcontainer">
+            <div class="image">
+                <img src="src/asserts/images/upimages/<?= $row['image'] ?>">
+            </div>
+
+            <div class="details">
+                    <h2><?=$row['bookName']?></h2>
+                    <p>Rs.<?=$row['price']?></p>
+            </div>
+
+            <div class="actions">
+                    <h4>
+                        <form action="cartdelete.php" method="POST">
+                            <button class="delete" type="submit" name="submit"><b>Delete</b></button>
+                            <input type="hidden" name="bookID" value="<?= $row['bookID'] ?>">
+                            <input type="hidden" name="userID" value="<?= $userID ?>">
+                        </form>
+                        
+                    </h4>
+            </div>
         </div>
-
-
+    
         
+<?php
+   $subtotal=$row['price']+ $subtotal;
 
+}
 
+?>
+</div> 
 
+    <div class="side2">   
+                <div class="payment">
 
-    
-    
+                            <div class="texts">
+                                    <h3>Payment Summary</h3>
+                                    <br>
+                            </div>
+
+                            <div class="summery">
+                                <div class="class1">
+                                    <h3>Sub total <span class="price">: Rs. <?=$subtotal?></span></h3>
+                                    <h3>Delivery <span class="price">:   Rs. 350</span></h3>
+                                    <h3>Full Payment <span class="price">: Rs. <?=$subtotal+350?></span></h3>
+                                </div>
+                            </div>
+
+                            <div class="class2">
+                                <button class="placeorder">Place Order</button>
+                            </div>
+
+                </div>
     </div>
+</div> 
+   
 
     <!--summary 1-------------------------------------------------------------------------------------------------------------------->
 
@@ -99,7 +143,41 @@
     <script src="src/asserts/js/cart.js"></script>
 
 
-<?php }
+<?php 
+        }
+        else { ?>
+            <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;">Cart is Empty! <br> Please add items to cart!</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <?php
+        }
+}
 else {
 ?>
     <br>

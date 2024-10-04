@@ -60,6 +60,6 @@ $result = $con->query($sql3);
 
 
 
-
+    header("Location:cart.php");
     mysqli_close($con);
 ?>

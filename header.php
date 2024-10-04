@@ -28,13 +28,25 @@
             BookHub
             </div>
 
+            
+            <img src="src\asserts\images\title bar\icons8-account-30.png" alt="login" width="25px" height="25px">
+            <?php
+            if(isset($_SESSION["email"])) { 
+                echo "<h4>Hi..! ".$firstName."</h4>";
+            }
+            ?>
+            
+            <?php
+            if(isset($_SESSION["email"])) { ?>
+                <form action="logout.php" method="POST">
+                <button type="hidden" name="logoff" id="submit" class="loginbtn">LOG OUT </button>
+            </form><?php
+            }
 
-            <div class="title_grp" style="justify-content: right;"><!-- this is the BookHub name -->
-                 <img src="src\asserts\images\title bar\icons8-account-30.png" alt="login" width="25px" height="25px">
-                     sign in / sign up
-            </div>
-
-
+            else{
+            echo "<a href='login.php'><button type='hidden' class='loginbtn' name='logoff' id='submit'>LOG IN</button></a>";
+            }
+            ?>
 
     </div>
 
