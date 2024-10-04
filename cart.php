@@ -105,9 +105,9 @@ $subtotal=0;
 
                             <div class="summery">
                                 <div class="class1">
-                                    <h3>Sub total <span class="price">: Rs. <?=$subtotal?></span></h3>
-                                    <h3>Delivery <span class="price">:   Rs. 350</span></h3>
-                                    <h3>Full Payment <span class="price">: Rs. <?=$subtotal+350?></span></h3>
+                                    <h3>Sub total <span class="price"> Rs. <?=$subtotal?></span></h3>
+                                    <h3>Delivery <span class="price">  Rs. 350</span></h3>
+                                    <h3>Full Payment <span class="price">Rs. <?=$subtotal+350?></span></h3>
                                 </div>
                             </div>
 

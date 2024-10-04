@@ -4,7 +4,7 @@
   session_start();
 
   if(isset($_SESSION["email"])) { 
-    header("Location:client.php");
+    header("Location:index.php");
     }
 
 $email = $_POST['email'];
