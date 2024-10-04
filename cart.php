@@ -43,7 +43,7 @@
     <br>
         <?php
 
-$sql = "SELECT books.bookID, books.bookName, books.price , books.image FROM books INNER JOIN cart ON books.bookID = cart.bookID WHERE cart.userID = '$userID'";
+$sql = "SELECT books.bookID, books.bookName, books.price , books.image , cart.qty FROM books INNER JOIN cart ON books.bookID = cart.bookID WHERE cart.userID = '$userID'";
         
 $result = $con->query($sql);
 if ($result->num_rows > 0){
@@ -77,6 +77,7 @@ $subtotal=0;
                     <h4>
                         <form action="cartdelete.php" method="POST">
                             <button class="delete" type="submit" name="submit"><b>Delete</b></button>
+                            <p>Quantity : <?= $row['qty'] ?></p>
                             <input type="hidden" name="bookID" value="<?= $row['bookID'] ?>">
                             <input type="hidden" name="userID" value="<?= $userID ?>">
                         </form>
@@ -87,7 +88,7 @@ $subtotal=0;
     
         
 <?php
-   $subtotal=$row['price']+ $subtotal;
+   $subtotal=$row['price']*$row['qty']+ $subtotal;
 
 }
 

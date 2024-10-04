@@ -25,7 +25,8 @@ $result = $con->query($sql3);
 
 
     $bookID = $_POST["bookID"];
-    $sql = "INSERT INTO cart (userID,bookID) VALUES ('$userID','$bookID')";
+    $qty = $_POST["qty"];
+    $sql = "INSERT INTO cart (userID,bookID,qty) VALUES ('$userID','$bookID','$qty')";
     
 
     if(mysqli_query($con, $sql)){

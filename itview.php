@@ -67,10 +67,16 @@ include_once('bookhubheader.php');
                 echo "<h2> Rs. " . $row['price'] . "</h3>"; 
                 ?>
 
+                <form action="cartinsert.php" method="POST" enctype="multipart/form-data">
+                    <div class="qty">
+                        <label for="qty" class="qty" id="qty">Quantity :</label>
+                         <input type="number" value="1" id="qty" name="qty">
+                    </div>
+                    
 
                 <div class="buttons">
             
-                    <form action="cartinsert.php" method="POST" enctype="multipart/form-data">
+                    
                         
                         <input type="hidden" value="<?=$bookID?>" id="bookID" name="bookID">
                         <input type="submit" value="Add to Cart" name="submit" class="addtocart">

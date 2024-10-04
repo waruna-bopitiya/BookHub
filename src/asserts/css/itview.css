@@ -46,4 +46,16 @@
     background-color: #2867a2;
     height: 50px;
 }
-    
+
+#qty{
+    font-size: 20px;
+    width: 40px;
+    height: 30px;
+    border: none;
+}
+
+.qty{
+    background-color: aquamarine;
+    width: 170px;
+    padding: 10px;
+}
