@@ -3,6 +3,53 @@
     require_once('bookhubheader.php');
 ?>
 
+
+<?php
+    // CONNECT DATABASE...............
+    $conn = new mysqli("localhost", "root", "", "bookhub");
+
+    // CHECK CONNECTION..............
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+
+    // GET DATA FROM FORM.......................
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_comment'])) {
+
+        $appName = $_POST['appName'];
+        $comment = $_POST['comment'];
+
+        // INSERT COMMENT TO DATABASE.....................
+        $sql = "INSERT INTO comments (app_name, comment) VALUES ('$appName', '$comment')";
+        $conn->query($sql);
+        
+    }
+
+    // DELETE COMMENT FROM TABLE....................
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_comment'])) {
+        $id = $_POST['id'];
+        $sql = "DELETE FROM comments WHERE id='$id'";
+        $conn->query($sql);
+        
+    }
+
+    // UPDATE COMMENT FROM TABLE....................
+    if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_comment'])) {
+        $id = $_POST['id'];
+        $appName = $_POST['appName'];
+        $comment = $_POST['comment'];
+
+        $sql = "UPDATE comments SET app_name='$appName', comment='$comment' WHERE id='$id'";
+        $conn->query($sql);
+        
+    }
+
+    // GET ALL COMMENTS FOR DISPLAY..................
+    $comments_sql = "SELECT * FROM comments";
+    $comments_result = $conn->query($comments_sql);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -57,9 +104,14 @@
     </div>
 
 
+    <!-- ADD COMMENT.............-->
+
+    <div class="comment2">
+
+        
     <section class="addcmnt">
                 <h3>Add Comment:</h3><br>
-                <form method="POST">
+                <form method="POST" onsubmit="return submitmessage();">
                     <span>Name:</span>
                     <input type="text" name="appName" required><br><br>
                     <span>Comment:</span><br><br>
@@ -68,33 +120,55 @@
                 </form>
     </section>
 
-    <section class="cmnt-list">
+
+
+            <!-- DISPLAY ALL COMMENTS SECTION................-->
+
+            <section class="cmnt-list">
                 <h3>All Comments:</h3><br>
-                  <?php if ($comments_result->num_rows > 0): ?>
-                    <?php while($row = $comments_result->fetch_assoc()): ?>
-                        <div class="comment_details">
-                            <h4><?php echo "App Name : ".$row['app_name']; ?></h4><br>
-                            <h4><?php echo "Comment : ".$row['comment']; ?></h4><br>
+                <?php 
+                    if ($comments_result->num_rows > 0) {
+                        while($row = $comments_result->fetch_assoc()) {
+                ?>
+                            <div class="comment_details">
+                                <h4>
+                                    <?php 
+                                        echo "App Name : "; 
+                                        echo $row['app_name']; 
+                                    ?>
+                                </h4><br>
+                                <h4>
+                                    <?php 
+                                        echo "Comment : "; 
+                                        echo $row['comment']; 
+                                    ?>
+                                </h4><br>
 
-                            <!-- Edit Comment Form -->
-                            <form method="POST">
-                                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                <label>Edit App Name :</label><input type="text" name="appName" required><br><br>
-                                <label>Edit Comment: </label><textarea name="comment" cols="50" rows="3" required></textarea><br>
-                                <button type="submit" name="update_comment" class="updatebtn">Update</button>
-                            </form>
+                                <!-- Edit and Delete Forms -->
+                                <form method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
+                                    
+                                    <label>Edit Name :</label>
+                                    <input type="text" name="appName" value="<?php echo $row['app_name']; ?>" required><br><br>
+                                    
+                                    <label>Edit Comment: </label>
+                                    <textarea name="comment" cols="50" rows="3" required><?php echo $row['comment']; ?></textarea><br>
+                                    
+                                    <button type="submit" name="update_comment" class="updatebtn" onclick="return updatemessage();">Update</button>
+                                    <button type="submit" name="delete_comment" class="deletebtn" onclick="return deletemessage();">Delete</button>
+                                </form><br><br>
+                            </div>
+                <?php 
+                        } 
+                    } else {
+                ?>
+                        <p>No comments yet!</p>
+                <?php 
+                    } 
+                ?>
+            </section>
+    </div>
 
-                            <!-- Delete Comment Form -->
-                            <form method="POST">
-                                <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
-                                <button type="submit" name="delete_comment" class="deletebtn">Delete</button><br><br>
-                            </form>
-                        </div>                     
-                    <?php endwhile; ?>
-                <?php else: ?>
-                    <p>No comments yet!</p>
-                <?php endif; ?>
-    </section>
 
 
 
@@ -107,6 +181,10 @@
     </header>
 
 </body>
+
+<script src="src/asserts/js/contactus.js"></script>
+<?php $conn->close(); ?>
+
 </html>
 
 
