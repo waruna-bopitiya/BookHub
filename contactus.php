@@ -105,14 +105,11 @@
 
 
     <!-- ADD COMMENT.............-->
-
-    <div class="comment2">
-
         
     <section class="addcmnt">
                 <h3>Add Comment:</h3><br>
                 <form method="POST" onsubmit="return submitmessage();">
-                    <span>Name:</span>
+                    <span>Name :</span>
                     <input type="text" name="appName" required><br><br>
                     <span>Comment:</span><br><br>
                     <textarea name="comment" cols="70" rows="5" required></textarea><br><br>
@@ -166,9 +163,7 @@
                 <?php 
                     } 
                 ?>
-            </section>
-    </div>
-
+    </section>
 
 
 
