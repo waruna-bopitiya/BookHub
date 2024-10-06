@@ -1,10 +1,8 @@
-<?php $title="Contact US "; ?>
 <?php
+
+    $title="About US "; 
+    
     require_once('bookhubheader.php');
-?>
-
-
-<?php
     // CONNECT DATABASE...............
     $conn = new mysqli("localhost", "root", "", "bookhub");
 
@@ -16,11 +14,11 @@
     // GET DATA FROM FORM.......................
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['submit_comment'])) {
 
-        $appName = $_POST['appName'];
+        $Name = $_POST['Name'];
         $comment = $_POST['comment'];
 
         // INSERT COMMENT TO DATABASE.....................
-        $sql = "INSERT INTO comments (app_name, comment) VALUES ('$appName', '$comment')";
+        $sql = "INSERT INTO comments (sname, comment) VALUES ('$Name', '$comment')";
         $conn->query($sql);
         
     }
@@ -36,10 +34,10 @@
     // UPDATE COMMENT FROM TABLE....................
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_comment'])) {
         $id = $_POST['id'];
-        $appName = $_POST['appName'];
+        $Name = $_POST['Name'];
         $comment = $_POST['comment'];
 
-        $sql = "UPDATE comments SET app_name='$appName', comment='$comment' WHERE id='$id'";
+        $sql = "UPDATE comments SET sname='$Name', comment='$comment' WHERE id='$id'";
         $conn->query($sql);
         
     }
@@ -105,14 +103,14 @@
 
 
     <!-- ADD COMMENT.............-->
-        
+        <div class="content">
     <section class="addcmnt">
                 <h3>Add Comment:</h3><br>
                 <form method="POST" onsubmit="return submitmessage();">
-                    <span>Name :</span>
-                    <input type="text" name="appName" required><br><br>
+                    <span>Name:</span>
+                    <input type="text" name="Name" required><br><br>
                     <span>Comment:</span><br><br>
-                    <textarea name="comment" cols="70" rows="5" required></textarea><br><br>
+                    <textarea class="textarea" name="comment" required></textarea><br><br>
                     <button type="submit" name="submit_comment" class="cmnt-btn">Submit</button>
                 </form>
     </section>
@@ -130,8 +128,8 @@
                             <div class="comment_details">
                                 <h4>
                                     <?php 
-                                        echo "App Name : "; 
-                                        echo $row['app_name']; 
+                                        echo "Name : "; 
+                                        echo $row['sname']; 
                                     ?>
                                 </h4><br>
                                 <h4>
@@ -146,9 +144,9 @@
                                     <input type="hidden" name="id" value="<?php echo $row['id']; ?>">
                                     
                                     <label>Edit Name :</label>
-                                    <input type="text" name="appName" value="<?php echo $row['app_name']; ?>" required><br><br>
+                                    <input type="text" name="Name" value="<?=$row['sname']?>" required><br><br>
                                     
-                                    <label>Edit Comment: </label>
+                                    <label for="Name" class="editname">Edit Comment: </label>
                                     <textarea name="comment" cols="50" rows="3" required><?php echo $row['comment']; ?></textarea><br>
                                     
                                     <button type="submit" name="update_comment" class="updatebtn" onclick="return updatemessage();">Update</button>
@@ -163,11 +161,11 @@
                 <?php 
                     } 
                 ?>
-    </section>
+        </section>
+        </div>
 
 
-
-    <header>
+    <header style="margin-top:100px;">
             <div class="header-container">
                 <nav>
                     <a href="#">Home</a> | <a href="#" class="active">Contact US</a>
