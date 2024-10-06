@@ -90,7 +90,7 @@
                     <div class="naveul"><ul>
                         <li class="menu-item"><a href="pub_added.php">Books</a></li>
                         <li class="menu-item"><a href="orderviewadmin.php">Orders</a></li>
-                        <li class="menu-item"> <a href="#">About Us</a></li>
+                        <li class="menu-item"> <a href="users.php">Users</a></li>
                         <li class="menu-item"><a href="#">Contact Us</a></li>
                         <li class="menu-item"><a href="#">Return Policy</a></li>
                     </ul></div>

@@ -3,7 +3,9 @@ require_once('header.php');
 ?>
 
 <link rel="stylesheet" href="src/asserts/css/pub_added.css">
-<div class="uploadbooktitle"></div>
+<div class="uploadbooktitle">
+    <a href="" class="button1" style="background-color: #272727;">Ordered book List</a>
+</div>
 
 <?php
 if (isset($_POST['delete'])) {
@@ -26,7 +28,7 @@ $sql5 = "SELECT cart.orderID, cart.bookID, cart.qty, cart.userID, delevery.amoun
 $result5 = $con->query($sql5);
 
 // Create table with column headers
-echo "<table><thead><tr><th>Order ID</th><th>User ID</th><th>Book ID</th><th>Book Name</th><th>Quantity</th><th>Address</th><th>Phone Number</th><th>Amount</th></tr></thead><tbody>";
+echo "<table><thead><tr><th>Order ID</th><th>User ID</th><th>Book ID</th><th>Book Name</th><th>Quantity</th><th>Book Price</th><th>Total Amount</th><th>Address</th><th>Phone Number</th></tr></thead><tbody>";
 
 while ($row = $result5->fetch_assoc()) {
     echo "<tr>";
@@ -35,9 +37,11 @@ while ($row = $result5->fetch_assoc()) {
     echo "<td>" . $row['bookID'] . "</td>";
     echo "<td>" . $row['bookName'] . "</td>";
     echo "<td>" . $row['qty'] . "</td>";
+    echo "<td> Rs." . $row['amount'] . "</td>";
+    echo "<td> Rs." . $row['qty']*$row['amount'] . "</td>";
     echo "<td>" . $row['address'] . "</td>";
     echo "<td>" . $row['tpnumber'] . "</td>";
-    echo "<td> Rs." . $row['amount'] . "</td>";
+    
     echo "</tr>";
 }
 

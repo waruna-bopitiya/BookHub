@@ -278,6 +278,7 @@ h5{
     place-items: center;
     display: flex;
     margin: 0px;
+    animation: slideAnimation 3s infinite;
 }
 
 #img1{

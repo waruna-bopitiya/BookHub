@@ -23,7 +23,42 @@
 <br>
 <br>
 <br>
+               <?php
+if ($homenumber == "" || $street == "" || $city == "" || $province == "" || $postalcode == "" || $phoneNumber == "") {
+                   ?>
+                   <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1 style="text-align: center;">You not set the delevery information <br> Please go to profile and set!<a href='profile.php'><br><button type='hidden' class='loginbtn' name='profile' id='submit'>PROFILE EDIT</button></a></h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br><?php
+               }
 
+else {
+?>
 <div class="side2">   
   
   
@@ -88,6 +123,6 @@
         <br>
     </h3>
 
-    <footer><?php
+ <?php } ?>   <footer><?php
 include_once('bookhubfooter.php')
 ?></footer>
