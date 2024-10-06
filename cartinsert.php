@@ -26,7 +26,7 @@ $result = $con->query($sql3);
 
     $bookID = $_POST["bookID"];
     $qty = $_POST["qty"];
-    $sql = "INSERT INTO cart (userID,bookID,qty) VALUES ('$userID','$bookID','$qty')";
+    $sql = "INSERT INTO cart (userID,bookID,qty,status) VALUES ('$userID','$bookID','$qty','cart')";
     
 
     if(mysqli_query($con, $sql)){
@@ -37,12 +37,13 @@ $result = $con->query($sql3);
         echo "failed to add record to database".mysqli_error($con);
     
     }
-   
-}
 
+    }   
+
+    
    
     }
-
+    
 
 
 

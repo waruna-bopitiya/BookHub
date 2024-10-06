@@ -1,47 +1,119 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+<?php $title="Profile"; 
+    require_once('bookhubheader.php');
+
+    if(isset($_SESSION["email"])) { 
+
+        $email = $_SESSION['email'];
+        require_once('config.php');
+            $sql3 = "SELECT * FROM user WHERE email = '$email' And userType='client'";
+
+        $result3 = $con->query($sql3);
+
+        if ($result3->num_rows > 0) {
+
+            $row = $result3->fetch_assoc();
+
+            $userID = $row['userID'];
+            $firstName = $row['firstName'];
+            $lastName = $row['lastName'];
+            $email = $row['email'];
+            $phoneNumber = $row['phoneNumber'];
+            $pswd = $row['pswd'];
+            $homenumber = $row['homenumber'];
+            $city = $row['city'];
+            $street = $row['street'];
+            $postalcode = $row['postalcode'];
+            $province = $row['province'];
+           
+
+        } }
+        
+?>
+
     <link rel="stylesheet" href="src/asserts/css/profile.css">
-</head>
-<body>
+
     <div class="content">
-        <div class="form">
-            <h2>Account Info</h2></header><br>
-            <form id="profileForm" action="profileupdate.php" method="post">
-            <div class="field input">
-            <input type="text" id="fname" name="fname" placeholder="First Name" required/>
-            <br><br>
-            <div class="field input">
-            <input type="text" id="lname" name="lname" placeholder="Last Name" required/>
-            <br><br>
-            </div>
-            <div class="field input">
-            <input type="text" id="add" name="add" placeholder="Address" required/>
-            <br><br>
-            </div>
-            <div class="field input">
-            <input type="text" id="email" name="email" placeholder="E-mail" required/>
-            <br><br>
-            </div>
-            <div class="field input">
-            <input type="password" id="pwd" name="pwd" placeholder="Password">
-            <br><br>
-            </div>
-            <div class="field input">
-            <input type="password" id="rpwd" name="rpwd" placeholder="Re-Enter Password">
-            <br><br>
-            </div>
-            <br>
-            <div class="field">
-            <button name="submit" class="btn" type="submit">Edit profile</button>
-            </div>
-            <div class="field">
-            <button name="submit" class="btn" type="submit">Delete</button>
-            </div>
-    </form>
+            <div class="form">
+                <h2 style="text-align:center;">Account Info</h2></header><br>
+                <form id="profileForm" action="saveDetails.php" method="POST">
+
+
+                    <input type="hidden" id="userID" name="userID" value="<?=$userID ?>" required/>
+                    
+                    <div class="field input">
+
+                        <input type="text" id="fname" name="firstName" placeholder="First Name" value="<?=$firstName?>" required/>
+                        <br><br>
+                    </div>
+                    
+                    <div class="field input">
+                        <input type="text" id="lname" name="lastName" placeholder="Last Name" value="<?=$lastName?>" required/>
+                        <br><br>
+                    </div>
+
+                    <div class="field input">
+                        <input type="email" id="add" name="email" placeholder="E-mail" value="<?=$email?>" required/>
+                        <br><br>
+                    </div>
+
+                    <div class="field input">
+                        <input type="text" id="add" name="phoneNumber" placeholder="Phone Number" value="<?=$phoneNumber?>" required/>
+                        <br><br>
+                    </div>
+                    <LEGEnd>Address
+                    <div class="field input">
+                        <input type="text" id="homenumber" name="homenumber" placeholder="Home Number" value="<?=$homenumber?>">
+                        <br><br>
+                    </div>
+
+                    <div class="field input">
+                        <input type="text" id="street" name="street" placeholder="Street" value="<?=$street?>">
+                        <br><br>
+                    </div>
+
+                    <div class="field input">
+                        <input type="text" id="city" name="city" placeholder="City" value="<?=$city?>">
+                        <br><br>
+                    </div>
+                    
+
+                    <div class="field input">
+                        <input type="text" id="province" name="province" placeholder="Province" value="<?=$province?>">
+                        <br><br>
+                    </div>
+
+                    <div class="field input">
+                        <input type="text" id="postalcode" name="postalcode" placeholder="Postalcode" value="<?=$postalcode?>">
+                        <br><br>
+                    </div>
+                    </LEGEnd>
+            
+                    <div class="field input">
+                        <input type="password" id="pwd" name="pswd" placeholder="Password" value="<?=$pswd?>">
+                        <br><br>
+                    </div>
+
+                    
+                    <div class="field input">
+                        <input type="password" id="rpwd" name="rpwd" placeholder="Re-Enter Password" value="<?=$pswd?>" required>
+                        <br><br>
+                    </div>
+            
+                    <br>
+
+                    <div class="field">
+                            <button name="submit" class="btn" type="submit">Save Details</button>
+                        
+                    </div></form>
+            
+                    <div class="field">
+                        <form action="profileDelete.php" method="POST">
+                        <input type="hidden" id="userID" name="userID" value="<?=$userID ?>">
+                            <button name="submit" class="btn" id="dltbtn" type="submit">Delete Account</button>
+                        </form>
+                    </div>
+                
     </div>
     </div>
     <script>
@@ -68,3 +140,8 @@
     </script>
 </body>
 </html>
+
+
+<footer><?php
+include_once('bookhubfooter.php')
+?></footer>

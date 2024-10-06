@@ -62,7 +62,7 @@
             <img src="src\asserts\images\title bar\icons8-account-30.png" alt="login" width="25px" height="25px">
             <?php
             if(isset($_SESSION["email"])) { 
-                echo "<h4>Hi..! ".$firstName."</h4>";
+                echo "Hi..!".$firstName."<a href='ordereditem.php'><button type='hidden' class='loginbtn' name='profile' id='submit'>ORDERED</button></a><a href='profile.php'><button type='hidden' class='loginbtn' name='profile' id='submit'>PROFILE</button></a><h4></h4>";
             }
             ?>
             
@@ -93,7 +93,7 @@
         <!-- This is the division which include search bar and menu, cart.............. -->
         
         <div class="logo_menubar">
-            <img src="src\asserts\images\bookhublogotransparent.png" alt="LOGO" width="200px" height="200px" margin-bottom="0px" >
+            <a href="index.php"><img src="src\asserts\images\bookhublogotransparent.png" alt="LOGO" width="200px" height="200px" margin-bottom="0px" ></a>
 
         </div>
 

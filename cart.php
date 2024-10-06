@@ -18,7 +18,15 @@
             $userID = $row['userID'];
             $firstName = $row['firstName'];
             $lastName = $row['lastName'];
-            $userType = $row['userType'];
+            $email = $row['email'];
+            $phoneNumber = $row['phoneNumber'];
+            $pswd = $row['pswd'];
+            $homenumber = $row['homenumber'];
+            $city = $row['city'];
+            $street = $row['street'];
+            $postalcode = $row['postalcode'];
+            $province = $row['province'];
+            
 
         } 
         
@@ -43,7 +51,7 @@
     <br>
         <?php
 
-$sql = "SELECT books.bookID, books.bookName, books.price , books.image , cart.qty FROM books INNER JOIN cart ON books.bookID = cart.bookID WHERE cart.userID = '$userID'";
+$sql = "SELECT books.bookID, books.bookName, books.price , books.image , cart.qty FROM books INNER JOIN cart ON books.bookID = cart.bookID WHERE cart.userID = '$userID' AND cart.status = 'cart'";
         
 $result = $con->query($sql);
 if ($result->num_rows > 0){
@@ -92,6 +100,8 @@ $subtotal=0;
 
 }
 
+    $fulltotal = $subtotal;
+
 ?>
 </div> 
 
@@ -112,7 +122,22 @@ $subtotal=0;
                             </div>
 
                             <div class="class2">
-                                <button class="placeorder">Place Order</button>
+                                <form action="payment.php" method="POST">
+                                    
+                                    <input type="hidden" name="userID" value="<?=$userID?>">
+                                    <input type="hidden" name="email" value="<?=$email?>">
+                                    <input type="hidden" name="phoneNumber" value="<?=$phoneNumber?>">
+                                    <input type="hidden" name="pswd" value="<?=$pswd?>">
+                                    <input type="hidden" name="homenumber" value="<?=$homenumber?>">
+                                    <input type="hidden" name="city" value="<?=$city?>">
+                                    <input type="hidden" name="street" value="<?=$street?>">
+                                    <input type="hidden" name="postalcode" value="<?=$postalcode?>">
+                                    <input type="hidden" name="province" value="<?=$province?>">
+                                    <input type="hidden" name="subtotal" value="<?=$subtotal?>">
+                                    <input type="hidden" name="fulltotal" value="<?=$fulltotal?>">
+
+                                <button type="submit" name="submit" class="placeorder">Place Order</button>
+                                </form>
                             </div>
 
                 </div>
