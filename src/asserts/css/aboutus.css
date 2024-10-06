@@ -34,7 +34,7 @@ header nav a.active {
 
 .content-container {
     width: 50%;
-    margin-top: 150px;
+    margin-top: 200px;
     margin-left: 45%;
     margin-right: 5%;
     margin-bottom: 50px;
@@ -61,4 +61,5 @@ header nav a.active {
 strong {
     color: #ff4d00;
 }
+
 

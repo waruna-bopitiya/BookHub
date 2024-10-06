@@ -14,6 +14,10 @@
 </head>
 <body>
   
+    <div class="photo">
+        <img src="src/asserts/images/aboutus.png" alt="bookhub">
+
+    </div>
 
     <div class="content-container">
         <div class="about-section">

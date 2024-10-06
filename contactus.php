@@ -1,6 +1,6 @@
 <?php
 
-    $title="About US "; 
+    $title="Contact US "; 
     
     require_once('bookhubheader.php');
     // CONNECT DATABASE...............
