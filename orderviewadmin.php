@@ -1,0 +1,48 @@
+<?php
+require_once('header.php');
+?>
+
+<link rel="stylesheet" href="src/asserts/css/pub_added.css">
+<div class="uploadbooktitle"></div>
+
+<?php
+if (isset($_POST['delete'])) {
+    require 'config.php';
+    $dltID = $_POST["bookID"];
+    $sql = "DELETE FROM books WHERE bookID='$dltID'";
+    $cp = mysqli_query($con, $sql);
+}
+
+require 'config.php';
+
+// Start HTML table for output
+echo "<div class='table1'>";
+$sql5 = "SELECT cart.orderID, cart.bookID, cart.qty, cart.userID, delevery.amount, delevery.address, delevery.tpnumber, books.bookName, books.price 
+         FROM cart 
+         INNER JOIN delevery ON cart.orderID = delevery.orderID 
+         INNER JOIN books ON cart.bookID = books.bookID 
+         WHERE cart.status = 'ordered'";
+
+$result5 = $con->query($sql5);
+
+// Create table with column headers
+echo "<table><thead><tr><th>Order ID</th><th>User ID</th><th>Book ID</th><th>Book Name</th><th>Quantity</th><th>Address</th><th>Phone Number</th><th>Amount</th></tr></thead><tbody>";
+
+while ($row = $result5->fetch_assoc()) {
+    echo "<tr>";
+    echo "<td>" . $row['orderID'] . "</td>";
+    echo "<td>" . $row['userID'] . "</td>";
+    echo "<td>" . $row['bookID'] . "</td>";
+    echo "<td>" . $row['bookName'] . "</td>";
+    echo "<td>" . $row['qty'] . "</td>";
+    echo "<td>" . $row['address'] . "</td>";
+    echo "<td>" . $row['tpnumber'] . "</td>";
+    echo "<td> Rs." . $row['amount'] . "</td>";
+    echo "</tr>";
+}
+
+echo "</tbody></table>";
+echo "</div>";
+
+mysqli_close($con);
+?>

@@ -1,4 +1,7 @@
 <?php $title="Item"; 
+
+    
+
         include_once('bookhubheader.php');
 
         require_once('config.php');
@@ -15,18 +18,19 @@
         $province = $_POST["province"];
         $fulltotal = $_POST["fulltotal"];
         $subtotal = $_POST["subtotal"];
-    
-        ?>
-        <?php
+        
+        
+if(isset($_POST['submit'])) {  
+        
         require_once('config.php');
         $sqli = "UPDATE cart SET status = 'ordered' WHERE userID = '$userID' AND status = 'cart'";
         $result = $con->query($sqli);
 
-        if(isset($_POST['submit'])) {
+
             $sql3 = "INSERT INTO delevery (userID,amount,status,address,tpnumber) VALUES ('$userID','$fulltotal','ordered','$homenumber $city $street $postalcode $province','$phoneNumber')"; 
             $result2 = $con->query($sql3);
 
-        }
+        
 
         $sql2 = "SELECT * FROM delevery WHERE userID = '$userID' AND amount = '$fulltotal'";
         $result2 = $con->query($sql2);
@@ -34,9 +38,18 @@
         while ($row = $result2->fetch_assoc()) {
             $orderID = $row['orderID'];
         }
-        
 
-?>
+        require_once('config.php');
+        $sql3 = "UPDATE cart SET orderID = '$orderID' WHERE userID = '$userID' AND status = 'ordered' AND orderID = '0'";
+        $result3 = $con->query($sql3);
+
+
+    
+
+
+    } ;
+    
+    ?>
 
         <!DOCTYPE html>
         <html lang="en">
@@ -81,6 +94,6 @@
 
         
 
-<footer><?php
-include_once('bookhubfooter.php')
+        <footer><?php
+        include_once('bookhubfooter.php')
 ?></footer>
