@@ -9,16 +9,19 @@
 
 
     <script>
-        function validateForm(event) {
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('pwd').value;
+    function validateForm() {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('pswd').value; 
 
-            if (!email || !password) {
-                alert('Please fill out all fields.');
-                event.preventDefault();
-            }
+        if (email === "" || password === "" || email === null || password === null) {
+            alert('Please fill out all fields.');
+            return false; 
+        } else {
+            return true; 
         }
-    </script>
+    }
+</script>
+
 
     
 </head>
@@ -30,12 +33,12 @@
                 <div class="form">
                     <div class="form-box">
                         <h2 class="login-title">Sign in</h2><br><br><br>
-                            <form action="loginread.php" method="post" onsubmit="validateForm(event)">
+                            <form action="loginread.php" method="post" onsubmit= "return validateForm()">
                                      <label for="email">Email</label>
-                                     <input type="email" id="email" name="email" placeholder="E-mail" required />
+                                     <input type="email" id="email" name="email" placeholder="E-mail"/>
                                     <label for="pwd">Password</label>
-                                    <input type="password" id="pswd" name="pswd" placeholder="Password" required/>
-                                    <button class="login-button" name="submit" id="signinBtn" type="submit">Login</button>
+                                    <input type="password" id="pswd" name="pswd" placeholder="Password">
+                                    <button class="login-button" name="submit" id="signinBtn" type="submit" >Login</button>
                             </form>
                         <p>Not a member yet? <a href="signup.php">SIGNUP</a></p>
                     </div>

@@ -6,24 +6,46 @@
     <title>Document</title>
     <link rel="stylesheet" href="src/asserts/css/signup.css">
 </head>
-<body>
+<body><script>
+        function validateForm() {
+            const fname = document.getElementById('fname').value;
+            const lname = document.getElementById('lname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('pswd').value;
+            const repeatPassword = document.getElementById('rpwd').value;
+
+            // Check if all fields are filled
+            if (fname=="" || lname=="" || email=="" || password=="" || repeatPassword=="" ) {
+                alert('Please fill out all fields.');
+                return false;
+            }
+
+            // Check if passwords match
+            if (password !== repeatPassword) {
+                alert('Passwords do not match.');
+                return false;
+            }
+
+            return true;
+        };
+    </script>
     <div class="content">
         <div class="form">
             <h2>Sign Up</h2></header><br>
-            <form id="signupForm" action="signupinsert.php" method="post">
+            <form id="signupForm" action="signupinsert.php" method="post" onsubmit="return validateForm()">
             <div class="field input">
             <input type="hidden" id="uid" name="uid">
             <input type="hidden" id="userType" name="userType" value="client">
             <br><br>
             <div class="field input">
-            <input type="text" id="fname" name="fname" placeholder="First Name" required/>
+            <input type="text" id="fname" name="fname" placeholder="First Name">
             <br><br>
             <div class="field input">
-            <input type="text" id="lname" name="lname" placeholder="Last Name" required/>
+            <input type="text" id="lname" name="lname" placeholder="Last Name">
             <br><br>
             </div>
             <div class="field input">
-            <input type="email" id="email" name="email" placeholder="E-mail" required/>
+            <input type="email" id="email" name="email" placeholder="E-mail">
             <br><br>
             </div>
             <div class="field input">
@@ -42,27 +64,6 @@
     </form>
     </div>
     </div>
-    <script>
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            const fname = document.getElementById('fname').value;
-            const lname = document.getElementById('lname').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('pwd').value;
-            const repeatPassword = document.getElementById('rpwd').value;
-
-            // Check if all fields are filled
-            if (!fname || !lname || !email || !password || !repeatPassword) {
-                alert('Please fill out all fields.');
-                e.preventDefault(); // Prevent form submission
-                return;
-            }
-
-            // Check if passwords match
-            if (password !== repeatPassword) {
-                alert('Passwords do not match.');
-                e.preventDefault(); // Prevent form submission
-            }
-        });
-    </script>
+    
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <?php $title="Profile"; 
     require_once('bookhubheader.php');
 
@@ -36,7 +35,7 @@
     <div class="content">
             <div class="form">
                 <h2 style="text-align:center;">Account Info</h2></header><br>
-                <form id="profileForm" action="saveDetails.php" method="POST">
+                <form id="profileForm" action="saveDetails.php" method="POST" onsubmit= "return validateNumber()">
 
 
                     <input type="hidden" id="userID" name="userID" value="<?=$userID ?>" required/>
@@ -48,17 +47,17 @@
                     </div>
                     
                     <div class="field input">
-                        <input type="text" id="lname" name="lastName" placeholder="Last Name" value="<?=$lastName?>" required/>
+                        <input type="text" id="lname" name="lastName" placeholder="Last Name" value="<?=$lastName?>"  required/>
                         <br><br>
                     </div>
 
                     <div class="field input">
-                        <input type="email" id="add" name="email" placeholder="E-mail" value="<?=$email?>" required/>
+                        <input type="email" id="email" name="email" placeholder="E-mail" value="<?=$email?>" required/>
                         <br><br>
                     </div>
 
                     <div class="field input">
-                        <input type="text" id="add" name="phoneNumber" placeholder="Phone Number" value="<?=$phoneNumber?>" required/>
+                        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" value="<?=$phoneNumber?>" required/>
                         <br><br>
                     </div>
                     <LEGEnd>Address
@@ -117,27 +116,39 @@
     </div>
     </div>
     <script>
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
+        function validateNumber() {
+            const inputField = document.getElementById('phoneNumber');
+            const value = inputField.value;
             const fname = document.getElementById('fname').value;
             const lname = document.getElementById('lname').value;
             const email = document.getElementById('email').value;
             const password = document.getElementById('pwd').value;
             const repeatPassword = document.getElementById('rpwd').value;
-
-            // Check if all fields are filled
-            if (!fname || !lname || !email || !password || !repeatPassword) {
+            const phoneNumber = document.getElementById('phoneNumber').value;
+            const homenumber = document.getElementById('homenumber').value;
+            const street = document.getElementById('street').value;
+            const city = document.getElementById('city').value;
+            const province = document.getElementById('province').value;
+            const postalcode = document.getElementById('postalcode').value;
+            
+            if (fname=="" || lname=="" || email=="" || password=="" || repeatPassword=="" || phoneNumber=="" || homenumber=="" || street=="" || city=="" || province=="" || postalcode=="") {
                 alert('Please fill out all fields.');
-                e.preventDefault(); // Prevent form submission
-                return;
+                return false;
+                
             }
-
-            // Check if passwords match
-            if (password !== repeatPassword) {
+            else if (password !== repeatPassword) {
                 alert('Passwords do not match.');
-                e.preventDefault(); // Prevent form submission
+                return false;
             }
-        });
+            else if (value.length !== 11) {
+                alert('Please enter a valid phone number.');
+                inputField.value = '94'; 
+                return false;
+            }
+            return true;
+        };
     </script>
+    
 </body>
 </html>
 

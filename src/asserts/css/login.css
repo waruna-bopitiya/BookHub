@@ -1,11 +1,16 @@
 body {
     background: url(../images/pexels-pixabay-159711.jpg);
+    
     display: flex;
     justify-content: center;
+    margin: 0px;
+    padding: 0px;
     align-items: center;  
     width: 100vw;
     height:90vh;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .content {

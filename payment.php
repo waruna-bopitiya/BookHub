@@ -74,7 +74,7 @@ else {
             <?=$city?>, <br>
             <?=$province?>, <br>
             <?=$postalcode?>. <br>
-            0<?=$phoneNumber?> <br>
+            <?=$phoneNumber?> <br>
             
         </p>
         <div class="editbtn">

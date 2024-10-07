@@ -74,6 +74,8 @@ require_once('header.php')
     <script>
         publishdate = new Date(); 
         document.getElementById("publishdate").value = publishdate;
+
+        
     
     </script>
 

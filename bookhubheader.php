@@ -108,11 +108,11 @@
 
                  <div class="menu">
                     <ul>
-                        <li class="menu-item"><a href="index.php">Home</a></li>
-                        <li class="menu-item"><a href="#">Categories</a></li>
-                        <li class="menu-item"> <a href="#">About Us</a></li>
-                        <li class="menu-item"><a href="#">Contact Us</a></li>
-                        <li class="menu-item"><a href="#">Return Policy</a></li>
+                    <a href="index.php"><li class="menu-item">Home</li></a>
+                    <a href="#"><li class="menu-item">Categories</li></a>
+                    <a href="#"><li class="menu-item"> About Us</li></a>
+                    <a href="#"><li class="menu-item">Contact Us</li></a>
+                    <a href="#"><li class="menu-item">Return Policy</li></a>
                     </ul>
                 </div>
          </div>

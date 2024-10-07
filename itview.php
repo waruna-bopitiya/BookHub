@@ -11,6 +11,7 @@ include_once('bookhubheader.php');
 </head>
 <body>
 
+
 <?php
 
 
@@ -67,10 +68,11 @@ include_once('bookhubheader.php');
                 echo "<h2> Rs. " . $row['price'] . "</h3>"; 
                 ?>
 
-                <form action="cartinsert.php" method="POST" enctype="multipart/form-data">
+                <form action="cartinsert.php" method="POST" enctype="multipart/form-data" onsubmit="return validateqty()">
                     <div class="qty">
-                        <label for="qty" class="qty" id="qty">Quantity :</label>
-                         <input type="number" value="1" id="qty" name="qty">
+                        <label for="qty" class="qty">Quantity :</label>
+                        <input type="number" value="1" id="qty" name="qty" min="1" step="1">
+
                     </div>
                     
 
@@ -83,7 +85,8 @@ include_once('bookhubheader.php');
                         </form>
 
                     
-                    <form action="">
+                <form action="cartinsert.php" method="POST" enctype="multipart/form-data" onsubmit="return validateqty()">
+                        <input type="hidden" value="1" id="qty" name="qty" min="1" step="1">
                         <input type="submit" value="Buy it Now" class="buyitnow">
                     </form>
                 </div>

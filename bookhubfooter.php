@@ -9,7 +9,8 @@
 <body>
 <div class="footer">
         <div class="logo">
-            <img src="src\asserts\images\bookhublogotransparent.png" alt="LOGO" width="200px" height="200px" margin-bottom="0px" >
+        
+        <a href="index.php"><img src="src\asserts\images\bookhublogotransparent.png" alt="LOGO" width="200px" height="200px" margin-bottom="0px" ></a>
         </div>
         <div class="copywrite">
             Copyright 2024- BOOKHUB - All Rights Reserved. Concept, <br>
