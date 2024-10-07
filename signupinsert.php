@@ -45,10 +45,8 @@
             
             }
 
-header("location: login.php");?>
-            <script>
-                alert("Registration Successful");
-            </script>
+header("location: sclogin.php");?>
+          
             
         <?php
     mysqli_close($con);

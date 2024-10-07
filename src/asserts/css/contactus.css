@@ -1,35 +1,4 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
-header {
-    background-color: #333;
-    padding: 40px 0;
-}
-
-.header-container {
-    width: 20%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-header nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 15px;
-}
-
-header nav a.active {
-    color: #ff4d00;
-}
-
-body {
-    background-color: #f4f4f4;
-    color: #333;
-}
 
 .container {
     width: 80%;
