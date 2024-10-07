@@ -44,7 +44,7 @@
     <header>
         <div class="header-container">
             <nav>
-                <a href="#">Home</a> | <a href="#" class="active">Return Policy</a>
+            <a href="index.php">Home</a> | <a href="#" class="active">Return Policy</a>
             </nav>
         </div>
     </header>

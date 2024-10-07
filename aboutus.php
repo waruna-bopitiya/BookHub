@@ -13,7 +13,8 @@
     <link rel="stylesheet" href="src/asserts/css/aboutus.css">
 </head>
 <body>
-  
+    <div class="content5">
+
     <div class="photo">
         <img src="src/asserts/images/aboutus.png" alt="bookhub">
 
@@ -34,10 +35,14 @@
         </div>
     </div>
 
+
+
+    </div>
+    
     <header>
         <div class="header-container">
             <nav>
-                <a href="#">Home</a> | <a href="#" class="active">About Us</a>
+            <a href="index.php">Home</a> | <a href="#" class="active">About Us</a>
             </nav>
         </div>
     </header>

@@ -168,7 +168,7 @@
     <header style="margin-top:100px;">
             <div class="header-container">
                 <nav>
-                    <a href="#">Home</a> | <a href="#" class="active">Contact US</a>
+                    <a href="index.php">Home</a> | <a href="#" class="active">Contact US</a>
                 </nav>
             </div>
     </header>
