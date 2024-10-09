@@ -1,3 +1,29 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION["email"])) { 
+        $email = $_SESSION['email'];
+    require_once('config.php');
+    $sql3 = "SELECT * FROM user WHERE email = '$email' And userType='client'";
+
+    $result = $con->query($sql3);
+
+        if ($result->num_rows > 0) {
+
+            $row = $result->fetch_assoc();
+
+            $userID = $row['userID'];
+            $firstName = $row['firstName'];
+            $lastName = $row['lastName'];
+            $userType = $row['userType'];
+
+
+        } 
+        }
+    
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,8 +57,28 @@
 
 
         <div class="title_grp" style="justify-content: right;"><!-- this is the BookHub name -->
+
+            
             <img src="src\asserts\images\title bar\icons8-account-30.png" alt="login" width="25px" height="25px">
-            sign in / sign up
+            <?php
+            if(isset($_SESSION["email"])) { 
+                echo "Hi..!".$firstName."<a href='ordereditem.php'><button type='hidden' class='loginbtn' name='profile' id='submit'>ORDERED</button></a><a href='profile.php'><button type='hidden' class='loginbtn' name='profile' id='submit'>PROFILE</button></a><h4></h4>";
+            }
+            ?>
+            
+            <?php
+            if(isset($_SESSION["email"])) { ?>
+                <form action="logout.php" method="POST">
+                <button type="hidden" name="logoff" id="submit" class="loginbtn">LOG OUT </button>
+            </form><?php
+            }
+
+            else{
+            echo "<a href='login.php'><button type='hidden' class='loginbtn' name='logoff' id='submit'>LOG IN</button></a>";
+            }
+            ?>
+
+
         </div>
 
 
@@ -47,7 +93,7 @@
         <!-- This is the division which include search bar and menu, cart.............. -->
         
         <div class="logo_menubar">
-            <img src="src\asserts\images\bookhublogotransparent.png" alt="LOGO" width="200px" height="200px" margin-bottom="0px" >
+            <a href="index.php"><img src="src\asserts\images\bookhublogotransparent.png" alt="LOGO" width="200px" height="200px" margin-bottom="0px" ></a>
 
         </div>
 
@@ -55,25 +101,26 @@
                     <form action="searchresult.php" method="GET" onsubmit="return validatesearch()">
                      <div class="search-container">
                         <input type="text" class="search-box" placeholder="Search in BookHub" name="searchname" id="searchname" value="<?php if (isset($_GET['searchname'])){echo $_GET['searchname'];}?>" >
-                        <input type="submit" class="search-button" name="submit" >  
+                        <input type="submit" class="search-button" name="submit" value="Search" >  
                      </div></form>
 
 
 
                  <div class="menu">
                     <ul>
-                        <li class="menu-item"><a href="index.php">Home</a></li>
-                        <li class="menu-item"><a href="#">Categories</a></li>
-                        <li class="menu-item"> <a href="#">About Us</a></li>
-                        <li class="menu-item"><a href="#">Contact Us</a></li>
-                        <li class="menu-item"><a href="#">Return Policy</a></li>
+                    <a href="index.php"><li class="menu-item">Home</li></a>
+                    <a href="category.php"><li class="menu-item">Categories</li></a>
+                    <a href="aboutus.php"><li class="menu-item"> About Us</li></a>
+                    <a href="contactus.php"><li class="menu-item">Contact Us</li></a>
+                    <a href="returnpolicy.php"><li class="menu-item">Return Policy</li></a>
                     </ul>
                 </div>
          </div>
 
          <div class="logo_menubar1">
+                <a href="cart.php">
                  <img src="src\asserts\images\menu bar\cart.png" alt="LOGO" width="100px" height="100px" margin-bottom="0px" >
-                    <h3>My Cart</h3>
+                    <h3>My Cart</h3></a>
          </div>
             
         </div>

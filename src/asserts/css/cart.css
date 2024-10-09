@@ -1,0 +1,151 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+body{
+    background-color:rgb(185, 250, 231);
+}
+
+.itemcontainer{
+    width: 80%;
+    height: 150px;
+    border: rgb(138, 255, 96) 2px solid;
+    background-color: rgba(65, 178, 184, 0.726);
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    justify-content: space-between;
+    margin-bottom: 40px;  
+    padding-left: 0px;  
+
+}
+
+.delete{
+    background-color: red;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.delete:hover{
+    background-color: rgb(121, 0, 0);
+}
+
+.image{
+    width: 100px;
+    position: relative;
+    height: 100%;
+    background-color: red;
+    margin-left: 0px;
+    padding-left: 0px;
+    border-radius: 15px 15px 15px 15px;
+    
+
+
+}
+
+.details{
+    margin-left: 20px;
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+    height: 100%;
+    /* justify-content: center; */
+    /* align-ite    ms: left; */
+
+}
+
+.actions{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment{
+    margin-top: 100px;
+    width: 500px;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(166, 218, 222);
+    margin-bottom: 0px;
+    border-radius: 15px;
+
+    padding: 30px;
+    margin-bottom: 40px;
+    
+}
+
+
+.placeorder{
+    width: 90%;
+    height: 50px;
+    background-color: #241782;
+    border-radius: 15px;
+    border: none;
+    justify-content: center;
+    color: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 50px;
+    font-size: 20px;
+
+
+
+}
+
+
+.placeorder:hover{
+    cursor: pointer;
+    background-color: #241782c1;
+    color: white;
+
+}
+.class1 h3 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.price {
+    margin-left: auto;
+    text-align: right;
+}
+
+.itemcontainer img{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px 15px 15px 15px;
+    border: 3px solid rgb(255, 234, 0);
+    scale: 1.1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.pgcontain{
+    display: flex;
+    justify-content: space-around
+
+}
+
+.side1{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+}
+
+#qty{
+    width: 30px;
+
+}

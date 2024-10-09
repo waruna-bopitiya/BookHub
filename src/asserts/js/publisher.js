@@ -11,6 +11,7 @@ function validate() {
         alert("Book Name cannot be empty");
         return false;
     }
+
     
     if (!authorname) {
         alert("Author Name cannot be empty");

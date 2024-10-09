@@ -37,7 +37,7 @@
              <?php
                      require_once('config.php');
 
-                     $sql = "SELECT bookName , image, price FROM books ORDER BY bookID DESC";
+                     $sql = "SELECT bookID , bookName , image, price FROM books ORDER BY bookID DESC";
 
                         $result = $con->query($sql);
 
@@ -45,10 +45,10 @@
 
                        while ($row =$result->fetch_assoc()) {
                            
-                           echo "<div class='bkcontainer'>";
+                           echo "<a href='itview.php?bookID=".$row['bookID']."'><div class='bkcontainer'>";
                            echo "<img src='src/asserts/images/upimages/".$row['image']."' width='100%' height='100%'>";
                            echo "<div class='bkname'><h3>".$row['bookName']."</h3> Rs.".$row['price']."</div>";
-                           echo "</div>";
+                           echo "</div></a>";
                     }
                
 
@@ -94,21 +94,21 @@
             <?php
                      require_once('config.php');
 
-                     $sql = "SELECT bookName , image, price FROM books";
+                     $sql = "SELECT bookID, bookName , image, price FROM books";
 
                         $result = $con->query($sql);
 
                        
 
                        while ($row =$result->fetch_assoc()) {
-                           echo "<div class='bkcntain'><div class='bksalename'>";
+                           echo "<a href='itview.php?bookID=".$row['bookID']."'><div class='bkcntain'><div class='bksalename'>";
                            echo "<h3>".$row['bookName']."</h3>";
                            echo "</div><div class='booksitem'><cenetr><img src='src/asserts/images/upimages/".$row['image']."' width='100%' height='100%'></center></td></div><div class='bktd'>";
                            echo "Rs. ".$row['price'];
                        
                        
                        
-                       echo "</div></div>";
+                       echo "</div></div></a>";
                     }
 
 
@@ -133,7 +133,7 @@
 
     <div class="footer">
         <div class="logo">
-            <img src="src\asserts\images\bookhublogotransparent.png" alt="LOGO" width="200px" height="200px" margin-bottom="0px" >
+        <a href="index.php"><img src="src\asserts\images\bookhublogotransparent.png" alt="LOGO" width="200px" height="200px" margin-bottom="0px" ></a>
         </div>
         <div class="copywrite">
             Copyright 2024- BOOKHUB - All Rights Reserved. Concept, <br>
@@ -146,5 +146,8 @@
 </div>
 </body>
 </html>
+<?php
+mysqli_close($con);
+?>
 
 <!-- lmgld nrgn rnoerlk nerhoen rlern  -->

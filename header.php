@@ -1,3 +1,28 @@
+<?php
+    session_start();
+
+    if(isset($_SESSION["email"])) { 
+        $email = $_SESSION['email'];
+    require_once('config.php');
+    $sql3 = "SELECT * FROM user WHERE email = '$email' And userType='admin'";
+
+    $result = $con->query($sql3);
+
+        if ($result->num_rows > 0) {
+
+            $row = $result->fetch_assoc();
+
+            $userID = $row['userID'];
+            $firstName = $row['firstName'];
+            $lastName = $row['lastName'];
+            $userType = $row['userType'];
+
+
+        } 
+        }
+    
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,16 +49,30 @@
 
 
         
-            <div class="title_grp" style="justify-content: center;"> <!-- this is the BookHub name -->
-            BookHub
-            </div>
-
-
             <div class="title_grp" style="justify-content: right;"><!-- this is the BookHub name -->
-                 <img src="src\asserts\images\title bar\icons8-account-30.png" alt="login" width="25px" height="25px">
-                     sign in / sign up
-            </div>
 
+            
+            <img src="src\asserts\images\title bar\icons8-account-30.png" alt="login" width="25px" height="25px">
+            <?php
+            if(isset($_SESSION["email"])) { 
+                echo "<h4>Hi..! ".$firstName."</h4>";
+            }
+            ?>
+            
+            <?php
+            if(isset($_SESSION["email"])) { ?>
+                <form action="logout.php" method="POST">
+                <button type="hidden" name="logoff" id="submit" class="loginbtn">LOG OUT </button>
+            </form><?php
+            }
+
+            else{
+            echo "<a href='login.php'><button type='hidden' class='loginbtn' name='logoff' id='submit'>LOG IN</button></a>";
+            }
+            ?>
+
+
+        </div>
 
 
     </div>
@@ -49,11 +88,10 @@
                      <h1>Bookhub Admin</h1>
                     </div>
                     <div class="naveul"><ul>
-                        <li class="menu-item"><a href="pub_added.php">Books</a></li>
-                        <li class="menu-item"><a href="#">Categories</a></li>
-                        <li class="menu-item"> <a href="#">About Us</a></li>
-                        <li class="menu-item"><a href="#">Contact Us</a></li>
-                        <li class="menu-item"><a href="#">Return Policy</a></li>
+                    <a href="pub_added.php"><li class="menu-item">Books</li></a>
+                        <a href="orderviewadmin.php"><li class="menu-item">Orders</li></a>
+                        <a href="users.php"><li class="menu-item"> Users</li></a>
+                        
                     </ul></div>
             </div> 
 

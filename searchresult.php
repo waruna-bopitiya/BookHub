@@ -18,7 +18,8 @@
                 {
                     foreach($query_run as $items)
                     {
-                        ?>          
+                        echo "<a href='itview.php?bookID=".$items['bookID']."'>";?>          
+                                    
                                     <div class="sitem">
                                     <tr>  
                                         
