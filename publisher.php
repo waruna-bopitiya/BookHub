@@ -34,7 +34,7 @@ require_once('header.php')
                             let priceValue = parseFloat(priceField.value);
     
                             if (!isNaN(priceValue)) {
-                            // Ensure the value is formatted with two decimal places
+                            
                             priceField.value = priceValue.toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
                             }
                             }

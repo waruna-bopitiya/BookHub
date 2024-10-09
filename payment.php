@@ -24,8 +24,13 @@
 <br>
 <br>
                <?php
+
+
 if ($homenumber == "" || $street == "" || $city == "" || $province == "" || $postalcode == "" || $phoneNumber == "") {
-                   ?>
+                 
+                 
+                 
+                 ?>
                    <br>
     <br>
     <br>

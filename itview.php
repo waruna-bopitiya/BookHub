@@ -56,7 +56,7 @@ include_once('bookhubheader.php');
                 echo "<h1>" . $row['bookName'] . "</h1>"; 
                 ?>
                 <?php 
-                echo "<h3> Author : " . $row['bookName'] . "</h3>"; 
+                echo "<h3> Author : " . $row['authorName'] . "</h3>"; 
                 ?>
                 <?php 
                 echo "<h3> Category : " . $row['category'] . "</h3>"; 
