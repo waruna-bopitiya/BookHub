@@ -1,5 +1,6 @@
 <?php
 require_once('header.php');
+
 ?>
 
 <link rel="stylesheet" href="src/asserts/css/pub_added.css">
@@ -43,4 +44,5 @@ echo "</tbody></table>";
 echo "</div>";
 
 mysqli_close($con);
+
 ?>

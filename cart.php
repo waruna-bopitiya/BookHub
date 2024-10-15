@@ -173,34 +173,9 @@ $subtotal=0;
         }
         else { ?>
             <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1 style="text-align: center;">Cart is Empty! <br> Please add items to cart!</h1>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
+    <h1 class="cart55" style="text-align: center;">Cart is Empty! <br> Please add items to cart!</h1>
+    
         <?php
         }
 }

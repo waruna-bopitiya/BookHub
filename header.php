@@ -1,8 +1,9 @@
 <?php
     session_start();
-
-    if(isset($_SESSION["email"])) { 
+    if ($_SESSION["userType"] == "admin") {
+    if(isset($_SESSION["email"])) {
         $email = $_SESSION['email'];
+
     require_once('config.php');
     $sql3 = "SELECT * FROM user WHERE email = '$email' And userType='admin'";
 
@@ -19,7 +20,7 @@
 
 
         } 
-        }
+        
     
 
 ?>
@@ -100,3 +101,11 @@
 
     </body>
     </html>
+<?php
+}
+    }
+    else{
+        session_destroy();
+        header("location:login.php");
+    }
+?>
